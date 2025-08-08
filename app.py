@@ -1,19 +1,4 @@
 # 1. Instalação forçada
-import subprocess
-import sys
-import importlib
-
-def install_and_import(package):
-    try:
-        importlib.import_module(package)
-    except ImportError:
-        subprocess.check_call([sys.executable, "-m", "pip", "install", package])
-    finally:
-        globals()[package] = importlib.import_module(package)
-
-install_and_import('plotly')
-install_and_import('pandas')
-install_and_import('numpy')
 
 # 2. Agora importe normalmente
 import streamlit as st
