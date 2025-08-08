@@ -175,4 +175,5 @@ elif menu == "🧠 Sugestões da IA":
 # ===================================
 # 📦 RODAPÉ
 # ===================================
-st.markdown("<div class='footer'>💼 Projeto de portfólio | by [Seu Nome]</div>", unsafe_allow_html=True)
+st.markdown("---")
+st.markdown("💼 Projeto de portfólio por Marina vieira Nagashima | GitHub: https://github.com/maryvnagashima/")
