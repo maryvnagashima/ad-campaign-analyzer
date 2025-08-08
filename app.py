@@ -1,433 +1,362 @@
+# app.py
 import streamlit as st
+import pandas as pd
 import plotly.graph_objects as go
 import plotly.express as px
 import numpy as np
-import pandas as pd
 from datetime import datetime, timedelta
+import io
 
-def create_neon_line_chart(data, title="Performance Trend"):
-    """Cria gráfico de linha com efeito neon similar à imagem"""
-    
-    fig = go.Figure()
-    
-    # Linha principal com efeito neon
-    fig.add_trace(go.Scatter(
-        x=data['x'],
-        y=data['y'],
-        mode='lines',
-        name='Main Trend',
-        line=dict(
-            color='#00FFFF',
-            width=3,
-            shape='spline'
-        ),
-        fill='tonexty',
-        fillcolor='rgba(0, 255, 255, 0.1)'
-    ))
-    
-    # Área de fundo preenchida
-    fig.add_trace(go.Scatter(
-        x=data['x'],
-        y=[0] * len(data['x']),
-        mode='lines',
-        line=dict(color='rgba(0,0,0,0)'),
-        fill='tonexty',
-        fillcolor='rgba(0, 255, 255, 0.05)',
-        showlegend=False
-    ))
-    
-    fig.update_layout(
-        title={
-            'text': title,
-            'font': {'size': 16, 'color': '#00FFFF'},
-            'x': 0.02
-        },
-        plot_bgcolor='rgba(0,0,0,0)',
-        paper_bgcolor='rgba(0,0,0,0)',
-        font={'color': '#ffffff'},
-        xaxis={
-            'gridcolor': 'rgba(255,255,255,0.1)',
-            'zerolinecolor': 'rgba(255,255,255,0.1)',
-            'color': '#ffffff',
-            'showgrid': True
-        },
-        yaxis={
-            'gridcolor': 'rgba(255,255,255,0.1)',
-            'zerolinecolor': 'rgba(255,255,255,0.1)',
-            'color': '#ffffff',
-            'showgrid': True
-        },
-        height=250,
-        margin=dict(l=20, r=20, t=40, b=20),
-        showlegend=False
-    )
-    
-    return fig
+# ===================================
+# 🔮 ESTILO CSS COMPLETO (seu código)
+# ===================================
+def load_css():
+    st.markdown(
+        """
+        <style>
+        /* Dashboard Moderno - Estilos CSS Avançados */
+        :root {
+            --primary-color: #00FFFF;
+            --secondary-color: #0080FF;
+            --accent-color: #40E0D0;
+            --success-color: #00FF80;
+            --warning-color: #FFD700;
+            --danger-color: #FF4444;
+            --dark-bg: #0a0b1e;
+            --dark-secondary: #1a1b3a;
+            --glass-bg: rgba(255, 255, 255, 0.05);
+            --border-glow: rgba(0, 255, 255, 0.3);
+        }
 
-def create_circular_progress(value, max_value, title, color='#00FFFF'):
-    """Cria indicador circular como na imagem"""
-    
-    percentage = (value / max_value) * 100
-    
-    fig = go.Figure(go.Indicator(
-        mode="gauge+number",
-        value=value,
-        title={'text': title, 'font': {'size': 14, 'color': '#ffffff'}},
-        number={'font': {'size': 24, 'color': color}},
-        gauge={
-            'axis': {'range': [None, max_value], 'tickwidth': 1, 'tickcolor': "white"},
-            'bar': {'color': color, 'thickness': 0.3},
-            'bgcolor': "rgba(255,255,255,0.1)",
-            'borderwidth': 2,
-            'bordercolor': "rgba(255,255,255,0.2)",
-            'steps': [
-                {'range': [0, max_value], 'color': "rgba(255,255,255,0.05)"}
-            ],
-        },
-        domain={'x': [0, 1], 'y': [0, 1]}
-    ))
-    
-    fig.update_layout(
-        paper_bgcolor="rgba(0,0,0,0)",
-        plot_bgcolor="rgba(0,0,0,0)",
-        font={'color': "white"},
-        height=200,
-        margin=dict(l=20, r=20, t=40, b=20)
-    )
-    
-    return fig
+        * { box-sizing: border-box; }
 
-def create_bar_chart_vertical(data, title="Performance by Category"):
-    """Cria gráfico de barras vertical com estilo neon"""
-    
-    fig = go.Figure(data=[
-        go.Bar(
-            x=data['categories'],
-            y=data['values'],
-            marker=dict(
-                color=['#00FFFF', '#0080FF', '#40E0D0', '#20B2AA', '#48D1CC'],
-                line=dict(color='#ffffff', width=1)
-            ),
-            text=[f'{x:.0f}' for x in data['values']],
-            textposition='outside',
-            textfont=dict(color='#ffffff')
-        )
-    ])
-    
-    fig.update_layout(
-        title={
-            'text': title,
-            'font': {'size': 16, 'color': '#00FFFF'},
-            'x': 0.02
-        },
-        plot_bgcolor='rgba(0,0,0,0)',
-        paper_bgcolor='rgba(0,0,0,0)',
-        font={'color': '#ffffff'},
-        xaxis={
-            'gridcolor': 'rgba(255,255,255,0.1)',
-            'color': '#ffffff',
-            'showgrid': False
-        },
-        yaxis={
-            'gridcolor': 'rgba(255,255,255,0.1)',
-            'color': '#ffffff',
-            'showgrid': True
-        },
-        height=250,
-        margin=dict(l=20, r=20, t=40, b=20),
-        showlegend=False
-    )
-    
-    return fig
+        .stApp {
+            background: linear-gradient(135deg, var(--dark-bg) 0%, var(--dark-secondary) 100%);
+            background-size: 400% 400%;
+            animation: gradientShift 15s ease infinite;
+            min-height: 100vh;
+        }
 
-def create_heatmap_calendar(data, title="Activity Heatmap"):
-    """Cria heatmap de calendário como na imagem"""
-    
-    # Simular dados de calendário
-    days = ['S', 'M', 'T', 'W', 'T', 'F', 'S']
-    weeks = 6
-    
-    # Gerar matriz de dados
-    calendar_data = np.random.randint(0, 100, size=(weeks, 7))
-    
-    fig = go.Figure(data=go.Heatmap(
-        z=calendar_data,
-        x=days,
-        y=[f'W{i+1}' for i in range(weeks)],
-        colorscale=[[0, 'rgba(0,0,0,0.1)'], [0.5, 'rgba(0,255,255,0.3)'], [1, '#00FFFF']],
-        showscale=False,
-        hoverongaps=False
-    ))
-    
-    fig.update_layout(
-        title={
-            'text': title,
-            'font': {'size': 14, 'color': '#00FFFF'},
-            'x': 0.02
-        },
-        plot_bgcolor='rgba(0,0,0,0)',
-        paper_bgcolor='rgba(0,0,0,0)',
-        font={'color': '#ffffff'},
-        xaxis={'color': '#ffffff', 'showgrid': False},
-        yaxis={'color': '#ffffff', 'showgrid': False},
-        height=180,
-        margin=dict(l=20, r=20, t=40, b=20)
-    )
-    
-    return fig
+        @keyframes gradientShift {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
 
-def create_scatter_plot(data, title="Correlation Analysis"):
-    """Cria scatter plot com efeito neon"""
-    
-    fig = go.Figure(data=go.Scatter(
-        x=data['x'],
-        y=data['y'],
-        mode='markers',
-        marker=dict(
-            size=data.get('size', [10] * len(data['x'])),
-            color='#00FFFF',
-            opacity=0.7,
-            line=dict(width=2, color='#ffffff'),
-            sizemode='diameter',
-            sizeref=2.*max(data.get('size', [10]))/40.**2
-        ),
-        text=data.get('labels', [f'Point {i}' for i in range(len(data['x']))]),
-        textposition="top center",
-        textfont=dict(color='#ffffff')
-    ))
-    
-    fig.update_layout(
-        title={
-            'text': title,
-            'font': {'size': 16, 'color': '#00FFFF'},
-            'x': 0.02
-        },
-        plot_bgcolor='rgba(0,0,0,0)',
-        paper_bgcolor='rgba(0,0,0,0)',
-        font={'color': '#ffffff'},
-        xaxis={
-            'gridcolor': 'rgba(255,255,255,0.1)',
-            'color': '#ffffff',
-            'showgrid': True
-        },
-        yaxis={
-            'gridcolor': 'rgba(255,255,255,0.1)',
-            'color': '#ffffff',
-            'showgrid': True
-        },
-        height=250,
-        margin=dict(l=20, r=20, t=40, b=20),
-        showlegend=False
-    )
-    
-    return fig
+        .metric-card, .glass-card {
+            background: var(--glass-bg);
+            border: 1px solid var(--border-glow);
+            border-radius: 15px;
+            padding: 20px;
+            margin: 10px 0;
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            box-shadow: 0 0 30px rgba(0, 255, 255, 0.1), inset 0 1px 1px rgba(255, 255, 255, 0.1);
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
 
-def create_metric_card_html(value, label, change=None, change_type="positive"):
-    """Cria card de métrica personalizado em HTML"""
-    
-    change_color = "#00FF80" if change_type == "positive" else "#FF4444"
-    change_icon = "▲" if change_type == "positive" else "▼"
-    change_html = f"""
-        <div style="color: {change_color}; font-size: 0.9rem; margin-top: 5px;">
-            {change_icon} {change}%
-        </div>
-    """ if change else ""
-    
-    return f"""
-    <div style="
-        background: rgba(255, 255, 255, 0.05);
-        border: 1px solid rgba(0, 255, 255, 0.3);
-        border-radius: 15px;
-        padding: 20px;
-        text-align: center;
-        backdrop-filter: blur(20px);
-        box-shadow: 0 0 30px rgba(0, 255, 255, 0.1);
-        transition: all 0.3s ease;
-        margin: 10px 0;
-    ">
-        <div style="
-            font-size: 2.2rem;
+        .metric-card:hover, .glass-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 40px rgba(0, 255, 255, 0.2), inset 0 1px 1px rgba(255, 255, 255, 0.2);
+            border-color: var(--primary-color);
+        }
+
+        .metric-card::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: linear-gradient(45deg, transparent, rgba(0, 255, 255, 0.1), transparent);
+            transform: rotate(45deg);
+            animation: shine 3s linear infinite;
+        }
+
+        @keyframes shine {
+            0% { transform: translateX(-100%) translateY(-100%) rotate(45deg); }
+            100% { transform: translateX(100%) translateY(100%) rotate(45deg); }
+        }
+
+        .metric-value {
+            font-size: 2.5rem;
             font-weight: bold;
-            color: #00FFFF;
-            text-shadow: 0 0 10px rgba(0, 255, 255, 0.5);
+            color: var(--primary-color);
+            text-shadow: 0 0 10px var(--primary-color), 0 0 20px var(--primary-color), 0 0 30px var(--primary-color);
             font-family: 'Orbitron', monospace;
-        ">{value}</div>
-        <div style="
+            animation: glow 2s ease-in-out infinite alternate;
+        }
+
+        @keyframes glow {
+            from { text-shadow: 0 0 10px var(--primary-color), 0 0 20px var(--primary-color), 0 0 30px var(--primary-color); }
+            to { text-shadow: 0 0 20px var(--primary-color), 0 0 30px var(--primary-color), 0 0 40px var(--primary-color); }
+        }
+
+        .metric-label {
             font-size: 0.9rem;
             color: rgba(176, 176, 176, 0.8);
             margin-top: 5px;
             letter-spacing: 2px;
             text-transform: uppercase;
             font-weight: 600;
-        ">{label}</div>
+            font-family: 'Roboto Mono', monospace;
+        }
+
+        h1, h2, h3 {
+            background: linear-gradient(45deg, var(--primary-color), var(--secondary-color));
+            background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            font-weight: bold;
+            margin-bottom: 1rem;
+        }
+
+        .stButton > button {
+            background: linear-gradient(45deg, var(--primary-color), var(--secondary-color));
+            color: #000;
+            border: none;
+            border-radius: 10px;
+            padding: 12px 24px;
+            font-weight: bold;
+            font-size: 1rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            box-shadow: 0 0 20px rgba(0, 255, 255, 0.3);
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .stButton > button::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+            transition: left 0.5s;
+        }
+
+        .stButton > button:hover::before {
+            left: 100%;
+        }
+
+        .status-indicator {
+            display: inline-block;
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            margin-right: 8px;
+            animation: pulse 2s infinite;
+        }
+
+        .status-online { background-color: var(--success-color); box-shadow: 0 0 10px var(--success-color); }
+        .status-warning { background-color: var(--warning-color); box-shadow: 0 0 10px var(--warning-color); }
+        .status-offline { background-color: var(--danger-color); box-shadow: 0 0 10px var(--danger-color); }
+
+        @keyframes pulse {
+            0% { transform: scale(0.95); box-shadow: 0 0 0 0 currentColor; }
+            70% { transform: scale(1); box-shadow: 0 0 0 10px transparent; }
+            100% { transform: scale(0.95); box-shadow: 0 0 0 0 transparent; }
+        }
+
+        .dashboard-title {
+            font-size: 3rem;
+            font-weight: 800;
+            text-align: center;
+            margin-bottom: 2rem;
+            background: linear-gradient(45deg, var(--primary-color), var(--secondary-color), var(--accent-color));
+            background-size: 300% 300%;
+            background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            animation: gradientText 4s ease infinite;
+        }
+
+        @keyframes gradientText {
+            0%, 100% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+        }
+
+        .footer {
+            background: var(--glass-bg);
+            border-top: 1px solid var(--border-glow);
+            backdrop-filter: blur(10px);
+            padding: 20px;
+            text-align: center;
+            color: rgba(176, 176, 176, 0.8);
+            font-size: 0.9rem;
+        }
+        </style>
+        """,
+        unsafe_allow_html=True
+    )
+
+# ===================================
+# 📈 FUNÇÕES DE GRÁFICOS (seu código)
+# ===================================
+def create_neon_line_chart(data, title="Performance Trend"):
+    fig = go.Figure()
+    fig.add_trace(go.Scatter(
+        x=data['x'], y=data['y'], mode='lines', name='Main Trend',
+        line=dict(color='#00FFFF', width=3, shape='spline'),
+        fill='tonexty', fillcolor='rgba(0, 255, 255, 0.1)'
+    ))
+    fig.add_trace(go.Scatter(
+        x=data['x'], y=[0]*len(data['x']), mode='lines', line=dict(color='rgba(0,0,0,0)'),
+        fill='tonexty', fillcolor='rgba(0, 255, 255, 0.05)', showlegend=False
+    ))
+    fig.update_layout(
+        title={'text': title, 'font': {'size': 16, 'color': '#00FFFF'}, 'x': 0.02},
+        plot_bgcolor='rgba(0,0,0,0)', paper_bgcolor='rgba(0,0,0,0)',
+        font={'color': '#ffffff'}, xaxis={'gridcolor': 'rgba(255,255,255,0.1)', 'zerolinecolor': 'rgba(255,255,255,0.1)', 'color': '#ffffff'},
+        yaxis={'gridcolor': 'rgba(255,255,255,0.1)', 'zerolinecolor': 'rgba(255,255,255,0.1)', 'color': '#ffffff'},
+        height=250, margin=dict(l=20, r=20, t=40, b=20), showlegend=False
+    )
+    return fig
+
+def create_metric_card(value, label, change=None, change_type="positive"):
+    change_color = "var(--success-color)" if change_type == "positive" else "var(--danger-color)"
+    change_icon = "▲" if change_type == "positive" else "▼"
+    change_html = f"<div style='color: {change_color}; margin-top: 5px;'>{change_icon} {change}%</div>" if change else ""
+    return f"""
+    <div class="metric-card">
+        <div class="metric-value">{value}</div>
+        <div class="metric-label">{label}</div>
         {change_html}
     </div>
     """
 
-def create_status_indicator(status, label):
-    """Cria indicador de status com cores"""
-    
-    colors = {
-        'online': '#00FF80',
-        'warning': '#FFD700', 
-        'offline': '#FF4444',
-        'active': '#00FFFF'
-    }
-    
-    color = colors.get(status, '#00FFFF')
-    
-    return f"""
-    <div style="display: flex; align-items: center; margin: 10px 0;">
-        <div style="
-            width: 12px;
-            height: 12px;
-            border-radius: 50%;
-            background-color: {color};
-            box-shadow: 0 0 10px {color};
-            margin-right: 10px;
-            animation: pulse 2s infinite;
-        "></div>
-        <span style="color: #ffffff; font-size: 0.9rem;">{label}</span>
-    </div>
-    """
+# ===================================
+# 🚀 CONFIGURAÇÃO INICIAL
+# ===================================
+st.set_page_config(page_title="AI de Criativos", layout="wide")
+load_css()
 
-def create_mini_sparkline(data, color='#00FFFF'):
-    """Cria mini gráfico sparkline"""
-    
-    fig = go.Figure()
-    
-    fig.add_trace(go.Scatter(
-        x=list(range(len(data))),
-        y=data,
-        mode='lines',
-        line=dict(color=color, width=2),
-        fill='tonexty',
-        fillcolor=f'rgba({int(color[1:3], 16)}, {int(color[3:5], 16)}, {int(color[5:7], 16)}, 0.1)'
-    ))
-    
-    fig.update_layout(
-        showlegend=False,
-        plot_bgcolor='rgba(0,0,0,0)',
-        paper_bgcolor='rgba(0,0,0,0)',
-        xaxis={'visible': False},
-        yaxis={'visible': False},
-        height=60,
-        margin=dict(l=0, r=0, t=0, b=0)
-    )
-    
-    return fig
+# ===================================
+# 📁 UPLOAD DE ARQUIVO
+# ===================================
+st.sidebar.markdown("<h3 style='color: #00FFFF;'>🔼 Upload de Dados</h3>", unsafe_allow_html=True)
+uploaded_file = st.sidebar.file_uploader("Carregue seu CSV", type=["csv"])
 
-def create_donut_chart_with_center_text(data, center_text, title):
-    """Cria gráfico donut com texto central"""
+# Dados simulados (se não houver upload)
+if uploaded_file is not None:
+    df = pd.read_csv(uploaded_file)
+    st.sidebar.success("✅ Dados carregados!")
+else:
+    # Gerar dados simulados
+    np.random.seed(42)
+    tipos = ["imagem única", "carrossel", "vídeo curto"]
+    imagens = ["pessoa sorrindo", "produto", "antes/depois"]
+    ctas = ["Compre agora", "Saiba mais", "Comece grátis", "Experimente"]
+    canais = ["Meta Ads", "Google Ads", "TikTok Ads"]
     
-    fig = go.Figure(data=[go.Pie(
-        labels=data['labels'],
-        values=data['values'],
-        hole=0.6,
-        marker=dict(
-            colors=['#00FFFF', '#0080FF', '#40E0D0', '#20B2AA', '#48D1CC'],
-            line=dict(color='#000000', width=2)
-        ),
-        textinfo='percent',
-        textfont=dict(color='#ffffff', size=12),
-        hovertemplate='<b>%{label}</b><br>Value: %{value}<br>Percent: %{percent}<extra></extra>'
-    )])
-    
-    fig.update_layout(
-        title={
-            'text': title,
-            'font': {'size': 16, 'color': '#00FFFF'},
-            'x': 0.5,
-            'xanchor': 'center'
-        },
-        plot_bgcolor='rgba(0,0,0,0)',
-        paper_bgcolor='rgba(0,0,0,0)',
-        font={'color': '#ffffff'},
-        height=300,
-        showlegend=False,
-        annotations=[dict(
-            text=center_text,
-            x=0.5, y=0.5,
-            font=dict(size=20, color='#00FFFF'),
-            showarrow=False
-        )]
-    )
-    
-    return fig
+    data = []
+    for i in range(300):
+        tipo = np.random.choice(tipos)
+        imagem = np.random.choice(imagens)
+        cta = np.random.choice(ctas)
+        canal = np.random.choice(canais)
+        impressoes = np.random.randint(1000, 50000)
+        cliques = np.random.binomial(impressoes, 0.02)
+        leads = np.random.binomial(cliques, 0.1)
+        conversoes = np.random.binomial(leads, 0.05)
+        custo = np.random.uniform(500, 5000)
+        
+        if imagem == "pessoa sorrindo" and cta == "Comece grátis":
+            conversoes = int(conversoes * 1.8)
+        if tipo == "vídeo curto" and canal == "TikTok Ads":
+            conversoes = int(conversoes * 2.0)
+            
+        data.append({
+            'canal': canal,
+            'tipo_criativo': tipo,
+            'imagem_tipo': imagem,
+            'cta': cta,
+            'impressoes': impressoes,
+            'cliques': cliques,
+            'leads': leads,
+            'conversoes': conversoes,
+            'custo_total': custo
+        })
+    df = pd.DataFrame(data)
 
-# Função principal para demonstrar todos os componentes
-def show_advanced_dashboard():
-    """Demonstra todos os componentes avançados"""
+# ===================================
+# 🧭 MENU LATERAL
+# ===================================
+menu = st.sidebar.selectbox("Navegação", [
+    "🏠 Home / Resumo Geral",
+    "🎯 CAC por Criativo",
+    "🎥 Desempenho de Criativos",
+    "📈 Canal & País",
+    "🧠 Sugestões da IA"
+])
+
+# ===================================
+# 🏠 HOME
+# ===================================
+if menu == "🏠 Home / Resumo Geral":
+    st.markdown("<h1 class='dashboard-title'>AI de Otimização de Criativos</h1>", unsafe_allow_html=True)
+    st.markdown("<p style='text-align: center; color: #aaa;'>Descubra os melhores criativos com inteligência artificial</p>", unsafe_allow_html=True)
     
-    st.markdown("## 🎨 Advanced Dashboard Components")
-    
-    # Dados de exemplo
-    line_data = {
-        'x': list(range(30)),
-        'y': [20 + 10*np.sin(x/5) + np.random.normal(0, 2) for x in range(30)]
-    }
-    
-    bar_data = {
-        'categories': ['CAT A', 'CAT B', 'CAT C', 'CAT D', 'CAT E'],
-        'values': [450, 320, 280, 180, 120]
-    }
-    
-    scatter_data = {
-        'x': np.random.uniform(0, 100, 15),
-        'y': np.random.uniform(0, 100, 15),
-        'size': np.random.uniform(10, 30, 15),
-        'labels': [f'Point {i+1}' for i in range(15)]
-    }
-    
-    donut_data = {
-        'labels': ['Google Ads', 'Facebook', 'Instagram', 'LinkedIn', 'TikTok'],
-        'values': [35, 25, 20, 15, 5]
-    }
-    
-    # Layout em colunas
-    col1, col2, col3 = st.columns([2, 1, 1])
-    
-    with col1:
-        st.plotly_chart(create_neon_line_chart(line_data, "📈 Performance Trend"), 
-                       use_container_width=True)
-    
-    with col2:
-        st.plotly_chart(create_circular_progress(78, 100, "🎯 Goal", "#00FFFF"), 
-                       use_container_width=True)
-    
-    with col3:
-        st.plotly_chart(create_heatmap_calendar({}, "📅 Activity"), 
-                       use_container_width=True)
-    
-    # Segunda linha
-    col1, col2 = st.columns(2)
-    
-    with col1:
-        st.plotly_chart(create_bar_chart_vertical(bar_data, "📊 Categories"), 
-                       use_container_width=True)
-    
-    with col2:
-        st.plotly_chart(create_scatter_plot(scatter_data, "🔍 Correlation"), 
-                       use_container_width=True)
-    
-    # Cards de métricas personalizados
     col1, col2, col3, col4 = st.columns(4)
-    
     with col1:
-        st.markdown(create_metric_card_html("1,247", "CAMPAIGNS", "12.5", "positive"), 
-                   unsafe_allow_html=True)
-    
+        st.markdown(create_metric_card("28%", "ROAS", "5.2", "positive"), unsafe_allow_html=True)
     with col2:
-        st.markdown(create_metric_card_html("R$ 58.84", "AVG CAC", "-15.3", "positive"), 
-                   unsafe_allow_html=True)
-    
+        st.markdown(create_metric_card("R$ 180", "CAC", "15.3", "positive"), unsafe_allow_html=True)
     with col3:
-        st.markdown(create_metric_card_html("48,392", "CONVERSIONS", "8.7", "positive"), 
-                   unsafe_allow_html=True)
-    
+        st.markdown(create_metric_card("48k", "CONVERSÕES", "8.7", "positive"), unsafe_allow_html=True)
     with col4:
-        st.markdown(create_metric_card_html("29.8%", "ROI BOOST", "5.2", "positive"), 
-                   unsafe_allow_html=True)
+        st.markdown(create_metric_card("3.2x", "ROI", "4.1", "positive"), unsafe_allow_html=True)
+    
+    # Gráficos
+    line_data = {'x': list(range(30)), 'y': [20 + 10*np.sin(x/5) + np.random.normal(0, 2) for x in range(30)]}
+    st.plotly_chart(create_neon_line_chart(line_data, "📈 Evolução do ROAS"), use_container_width=True)
 
-if __name__ == "__main__":
-    show_advanced_dashboard()
+# ===================================
+# 🎯 CAC por Criativo
+# ===================================
+elif menu == "🎯 CAC por Criativo":
+    st.markdown("<h2 class='dashboard-title'>CAC por Criativo</h2>", unsafe_allow_html=True)
+    
+    df['cac'] = df['custo_total'] / df['conversoes'].replace(0, 1)
+    cac_por_criativo = df.groupby(['tipo_criativo', 'cta'])['cac'].mean().reset_index()
+    
+    st.dataframe(cac_por_criativo.style.format({"cac": "R$ {:.2f}"}))
+    
+    fig = px.bar(cac_por_criativo, x='tipo_criativo', y='cac', color='cta', title="CAC por Tipo de Criativo")
+    fig.update_traces(marker=dict(line=dict(width=1, color='white')))
+    st.plotly_chart(fig, use_container_width=True)
+
+# ===================================
+# 🧠 Sugestões da IA
+# ===================================
+elif menu == "🧠 Sugestões da IA":
+    st.markdown("<h2 class='dashboard-title'>Sugestões da IA</h2>", unsafe_allow_html=True)
+    
+    st.markdown("""
+    <div class='glass-card'>
+        <h3>🎯 Recomendações Automáticas</h3>
+        <p><span class='status-indicator status-online'></span> <strong>Brasil:</strong> Reduzir TikTok Ads em 20%</p>
+        <p><span class='status-indicator status-warning'></span> <strong>EUA:</strong> Aumentar Google Ads em 15%</p>
+        <p><span class='status-indicator status-online'></span> <strong>Alemanha:</strong> Manter orçamento atual</p>
+        <p><span class='status-indicator status-warning'></span> <strong>CTA ideal:</strong> 'Comece grátis' converte 68% mais</p>
+    </div>
+    """, unsafe_allow_html=True)
+    
+    st.markdown("""
+    <div class='glass-card'>
+        <h3>💡 Insights da IA</h3>
+        <p>• Criativos com <strong>imagem de pessoa sorrindo</strong> têm CTR 40% maior</p>
+        <p>• Formato <strong>vídeo curto</strong> no TikTok converte 2x mais</p>
+        <p>• Melhor horário: <strong>segundas entre 18h-20h</strong></p>
+    </div>
+    """, unsafe_allow_html=True)
+
+# ===================================
+# 📦 RODAPÉ
+# ===================================
+st.markdown("<div class='footer'>💼 Projeto de portfólio | by [Seu Nome]</div>", unsafe_allow_html=True)
