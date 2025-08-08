@@ -1,0 +1,501 @@
+id,canal,tipo_criativo,imagem_tipo,texto_criativo,cta,impressoes,cliques,leads,conversoes,bom_desempenho,probabilidade_sucesso
+0,Meta Ads,vídeo curto,pessoa sorrindo,Oferta por tempo limitado,Experimente,12284,248,18,2,0,0.83
+1,Google Ads,vídeo curto,produto,Vagas abertas,Saiba mais,3433,71,6,0,0,0.07333333333333333
+2,TikTok Ads,imagem única,pessoa sorrindo,Oferta por tempo limitado,Comece grátis,19431,390,39,3,1,0.44349999999999995
+3,Meta Ads,vídeo curto,pessoa sorrindo,Oferta por tempo limitado,Comece grátis,15502,279,29,1,0,0.4841666666666666
+4,TikTok Ads,carrossel,pessoa sorrindo,Curso online com certificado,Experimente,24483,475,38,1,0,0.22316666666666662
+5,Google Ads,carrossel,produto,Curso online com certificado,Experimente,10692,243,32,3,1,0.87
+6,Google Ads,carrossel,antes/depois,Aprenda do zero,Compre agora,25276,518,61,2,0,0.05516666666666667
+7,Meta Ads,imagem única,pessoa sorrindo,Vagas abertas,Comece grátis,49984,1068,112,14,1,0.46583333333333343
+8,TikTok Ads,imagem única,antes/depois,Oferta por tempo limitado,Compre agora,39660,823,83,5,1,0.8975
+9,TikTok Ads,carrossel,antes/depois,Oferta por tempo limitado,Compre agora,48716,1022,109,7,1,0.22333333333333336
+10,TikTok Ads,carrossel,produto,Aprenda do zero,Compre agora,49702,999,94,5,1,0.7
+11,Google Ads,imagem única,pessoa sorrindo,Oferta por tempo limitado,Comece grátis,23299,468,55,9,1,0.825
+12,TikTok Ads,vídeo curto,produto,Aprenda do zero,Compre agora,24776,484,44,2,0,0.2333333333333333
+13,Meta Ads,carrossel,antes/depois,Ganhe 20% de desconto,Saiba mais,32968,650,83,4,1,0.5464999999999999
+14,Google Ads,imagem única,pessoa sorrindo,Ganhe 20% de desconto,Saiba mais,45417,959,117,2,0,0.2548809523809524
+15,Google Ads,imagem única,pessoa sorrindo,Oferta por tempo limitado,Saiba mais,22556,439,43,3,1,0.16107142857142853
+16,Google Ads,vídeo curto,pessoa sorrindo,Vagas abertas,Experimente,1197,23,4,0,0,0.2225
+17,TikTok Ads,imagem única,antes/depois,Vagas abertas,Comece grátis,48011,929,90,3,1,0.92
+18,Meta Ads,imagem única,antes/depois,Curso online com certificado,Experimente,2802,63,10,1,0,0.4569047619047619
+19,Google Ads,vídeo curto,antes/depois,Aprenda do zero,Experimente,26199,536,58,5,1,0.715
+20,TikTok Ads,imagem única,antes/depois,Ganhe 20% de desconto,Compre agora,43642,920,83,5,1,0.8575
+21,Meta Ads,vídeo curto,produto,Ganhe 20% de desconto,Comece grátis,47940,963,103,11,1,0.7903333333333333
+22,TikTok Ads,imagem única,pessoa sorrindo,Vagas abertas,Experimente,34986,718,69,2,0,0.4986666666666666
+23,Google Ads,carrossel,produto,Vagas abertas,Comece grátis,6895,143,14,0,0,0.075
+24,Meta Ads,imagem única,antes/depois,Aprenda do zero,Comece grátis,41447,787,93,4,1,0.8723333333333333
+25,Google Ads,imagem única,pessoa sorrindo,Vagas abertas,Compre agora,46236,913,88,3,1,0.7530238095238095
+26,Google Ads,imagem única,antes/depois,Curso online com certificado,Compre agora,24093,438,39,6,1,0.6625595238095238
+27,Google Ads,carrossel,antes/depois,Oferta por tempo limitado,Saiba mais,46017,958,91,6,1,0.6375476190476188
+28,TikTok Ads,imagem única,pessoa sorrindo,Aprenda do zero,Saiba mais,25376,538,50,0,0,0.08
+29,Google Ads,vídeo curto,antes/depois,Aprenda do zero,Saiba mais,11966,215,17,3,1,0.68
+30,Meta Ads,carrossel,produto,Curso online com certificado,Saiba mais,43675,858,70,5,1,0.5841666666666666
+31,Meta Ads,imagem única,antes/depois,Aprenda do zero,Saiba mais,33093,667,56,4,1,0.9358333333333334
+32,TikTok Ads,vídeo curto,antes/depois,Aprenda do zero,Saiba mais,26945,496,59,4,1,0.9575
+33,Google Ads,carrossel,produto,Ganhe 20% de desconto,Comece grátis,47175,946,89,8,1,0.06833333333333333
+34,Meta Ads,vídeo curto,antes/depois,Vagas abertas,Saiba mais,9130,183,21,0,0,0.16333333333333336
+35,Google Ads,carrossel,pessoa sorrindo,Ganhe 20% de desconto,Saiba mais,14245,273,27,0,0,0.30861904761904757
+36,Google Ads,carrossel,pessoa sorrindo,Curso online com certificado,Saiba mais,33580,698,57,3,1,0.8666666666666666
+37,TikTok Ads,imagem única,pessoa sorrindo,Aprenda do zero,Experimente,31977,611,76,3,1,0.8591666666666667
+38,TikTok Ads,imagem única,pessoa sorrindo,Vagas abertas,Comece grátis,39155,759,77,0,0,0.07
+39,Meta Ads,vídeo curto,produto,Oferta por tempo limitado,Comece grátis,29761,576,48,1,0,0.436404761904762
+40,TikTok Ads,carrossel,pessoa sorrindo,Curso online com certificado,Compre agora,1412,19,1,1,0,0.0415
+41,TikTok Ads,carrossel,pessoa sorrindo,Ganhe 20% de desconto,Experimente,49816,936,91,7,1,0.98
+42,Meta Ads,imagem única,pessoa sorrindo,Vagas abertas,Comece grátis,3914,68,7,1,0,0.46583333333333343
+43,Meta Ads,carrossel,pessoa sorrindo,Oferta por tempo limitado,Comece grátis,14923,268,20,0,0,0.49433333333333346
+44,Google Ads,carrossel,antes/depois,Aprenda do zero,Comece grátis,6486,130,14,1,0,0.11999999999999998
+45,Meta Ads,imagem única,pessoa sorrindo,Ganhe 20% de desconto,Comece grátis,25244,533,47,7,1,0.9041666666666666
+46,Meta Ads,vídeo curto,antes/depois,Curso online com certificado,Comece grátis,24625,500,51,5,1,0.248
+47,Google Ads,carrossel,pessoa sorrindo,Vagas abertas,Compre agora,27962,557,56,3,1,0.6472142857142856
+48,Google Ads,carrossel,antes/depois,Oferta por tempo limitado,Saiba mais,29178,567,51,0,0,0.6375476190476188
+49,Meta Ads,imagem única,antes/depois,Ganhe 20% de desconto,Comece grátis,40298,796,85,7,1,0.925
+50,Meta Ads,carrossel,pessoa sorrindo,Curso online com certificado,Experimente,23700,439,40,5,1,0.6624523809523808
+51,Google Ads,carrossel,antes/depois,Ganhe 20% de desconto,Compre agora,43356,902,100,4,1,0.44891666666666663
+52,Google Ads,carrossel,produto,Curso online com certificado,Experimente,34307,641,55,4,1,0.87
+53,Google Ads,imagem única,pessoa sorrindo,Oferta por tempo limitado,Compre agora,6713,137,19,0,0,0.05
+54,Meta Ads,carrossel,produto,Oferta por tempo limitado,Compre agora,2015,41,9,0,0,0.683690476190476
+55,TikTok Ads,imagem única,produto,Ganhe 20% de desconto,Saiba mais,7938,178,11,0,0,0.5151666666666668
+56,Meta Ads,imagem única,antes/depois,Aprenda do zero,Compre agora,33606,677,73,2,0,0.17666666666666664
+57,Meta Ads,imagem única,produto,Ganhe 20% de desconto,Comece grátis,18100,341,40,1,0,0.25483333333333336
+58,Google Ads,vídeo curto,produto,Curso online com certificado,Saiba mais,44125,842,75,3,1,0.5055833333333335
+59,TikTok Ads,imagem única,pessoa sorrindo,Curso online com certificado,Comece grátis,16781,333,32,3,1,0.7433333333333333
+60,TikTok Ads,imagem única,produto,Ganhe 20% de desconto,Experimente,5637,143,20,1,0,0.03
+61,Meta Ads,imagem única,produto,Vagas abertas,Saiba mais,40037,836,83,2,0,0.2094047619047619
+62,Meta Ads,vídeo curto,antes/depois,Aprenda do zero,Experimente,19271,386,40,0,0,0.125
+63,Meta Ads,imagem única,produto,Aprenda do zero,Saiba mais,24061,481,39,1,0,0.6115833333333334
+64,Meta Ads,carrossel,produto,Vagas abertas,Comece grátis,24321,453,44,3,1,0.9058333333333334
+65,TikTok Ads,imagem única,antes/depois,Curso online com certificado,Experimente,3125,65,3,0,0,0.13145021645021646
+66,Meta Ads,vídeo curto,antes/depois,Oferta por tempo limitado,Comece grátis,41441,834,75,2,0,0.08783333333333333
+67,Google Ads,vídeo curto,pessoa sorrindo,Ganhe 20% de desconto,Comece grátis,48915,977,106,10,1,0.9338333333333333
+68,Google Ads,carrossel,antes/depois,Aprenda do zero,Comece grátis,15369,315,31,2,0,0.11999999999999998
+69,Meta Ads,vídeo curto,antes/depois,Vagas abertas,Saiba mais,29024,591,60,1,0,0.16333333333333336
+70,TikTok Ads,vídeo curto,produto,Ganhe 20% de desconto,Comece grátis,25818,486,38,4,1,0.875
+71,TikTok Ads,carrossel,antes/depois,Ganhe 20% de desconto,Saiba mais,11954,257,29,0,0,0.07
+72,Meta Ads,carrossel,antes/depois,Aprenda do zero,Compre agora,40051,776,77,2,0,0.3658333333333333
+73,Google Ads,imagem única,antes/depois,Oferta por tempo limitado,Compre agora,46745,939,78,5,1,0.15666666666666665
+74,Meta Ads,imagem única,antes/depois,Vagas abertas,Compre agora,28534,582,56,4,1,0.8116666666666668
+75,TikTok Ads,carrossel,produto,Vagas abertas,Experimente,6256,125,17,1,0,0.46799999999999997
+76,Google Ads,imagem única,antes/depois,Ganhe 20% de desconto,Compre agora,31523,633,53,5,1,0.5344444444444445
+77,Google Ads,imagem única,produto,Oferta por tempo limitado,Compre agora,6984,128,12,1,0,0.5011190476190477
+78,Google Ads,vídeo curto,antes/depois,Oferta por tempo limitado,Saiba mais,28202,590,53,3,1,0.036333333333333336
+79,Meta Ads,carrossel,antes/depois,Oferta por tempo limitado,Experimente,11789,224,22,2,0,0.695
+80,TikTok Ads,carrossel,produto,Vagas abertas,Comece grátis,7371,151,15,1,0,0.05
+81,Meta Ads,imagem única,antes/depois,Aprenda do zero,Experimente,21609,408,41,1,0,0.2046666666666667
+82,Google Ads,vídeo curto,produto,Vagas abertas,Experimente,45241,954,90,5,1,0.435
+83,Meta Ads,carrossel,antes/depois,Vagas abertas,Saiba mais,4797,100,7,1,0,0.11
+84,TikTok Ads,imagem única,antes/depois,Oferta por tempo limitado,Experimente,3708,74,5,1,0,0.265
+85,Meta Ads,carrossel,pessoa sorrindo,Oferta por tempo limitado,Comece grátis,35393,749,74,5,1,0.49433333333333346
+86,TikTok Ads,vídeo curto,antes/depois,Aprenda do zero,Comece grátis,46719,973,93,12,1,0.8966666666666666
+87,Google Ads,vídeo curto,produto,Curso online com certificado,Experimente,39356,773,82,6,1,0.96
+88,Meta Ads,vídeo curto,pessoa sorrindo,Ganhe 20% de desconto,Comece grátis,2759,48,3,1,0,0.203
+89,Meta Ads,carrossel,pessoa sorrindo,Ganhe 20% de desconto,Compre agora,25861,524,51,3,1,0.82
+90,Google Ads,carrossel,pessoa sorrindo,Curso online com certificado,Saiba mais,26522,532,41,1,0,0.8666666666666666
+91,Meta Ads,carrossel,antes/depois,Curso online com certificado,Experimente,48190,1028,117,6,1,0.8775
+92,Meta Ads,vídeo curto,antes/depois,Oferta por tempo limitado,Comece grátis,9519,174,14,1,0,0.08783333333333333
+93,Google Ads,vídeo curto,produto,Oferta por tempo limitado,Experimente,10503,209,17,0,0,0.81
+94,Meta Ads,carrossel,antes/depois,Curso online com certificado,Comece grátis,3198,75,11,1,0,0.15
+95,Meta Ads,carrossel,produto,Ganhe 20% de desconto,Comece grátis,23419,454,53,4,1,0.5041666666666668
+96,Meta Ads,imagem única,produto,Ganhe 20% de desconto,Saiba mais,8083,147,17,0,0,0.5583333333333332
+97,TikTok Ads,carrossel,antes/depois,Ganhe 20% de desconto,Saiba mais,28856,569,56,1,0,0.07
+98,Google Ads,vídeo curto,produto,Aprenda do zero,Saiba mais,12372,255,30,1,0,0.27166666666666667
+99,Google Ads,carrossel,pessoa sorrindo,Vagas abertas,Compre agora,13875,287,23,3,1,0.6472142857142856
+100,Meta Ads,carrossel,antes/depois,Curso online com certificado,Experimente,48924,935,99,5,1,0.8775
+101,TikTok Ads,carrossel,produto,Oferta por tempo limitado,Compre agora,22172,469,53,2,0,0.4233095238095238
+102,Google Ads,imagem única,antes/depois,Oferta por tempo limitado,Saiba mais,24150,502,45,4,1,0.7429999999999999
+103,TikTok Ads,imagem única,produto,Oferta por tempo limitado,Compre agora,1481,31,3,0,0,0.31998412698412687
+104,TikTok Ads,imagem única,pessoa sorrindo,Ganhe 20% de desconto,Compre agora,19023,395,30,2,0,0.8478333333333333
+105,TikTok Ads,carrossel,produto,Curso online com certificado,Experimente,27212,507,43,2,0,0.14
+106,TikTok Ads,vídeo curto,produto,Oferta por tempo limitado,Experimente,12344,260,26,0,0,0.19
+107,TikTok Ads,carrossel,pessoa sorrindo,Vagas abertas,Saiba mais,28935,563,59,5,1,0.3251428571428571
+108,TikTok Ads,carrossel,antes/depois,Vagas abertas,Saiba mais,26510,536,56,3,1,0.5085000000000001
+109,Google Ads,vídeo curto,pessoa sorrindo,Oferta por tempo limitado,Experimente,21662,434,52,3,1,0.9113333333333332
+110,Meta Ads,imagem única,produto,Ganhe 20% de desconto,Experimente,14737,314,30,1,0,0.04333333333333333
+111,Google Ads,vídeo curto,antes/depois,Aprenda do zero,Compre agora,9436,193,17,0,0,0.055
+112,Meta Ads,carrossel,pessoa sorrindo,Aprenda do zero,Compre agora,33733,650,62,4,1,0.4376428571428572
+113,Google Ads,imagem única,pessoa sorrindo,Ganhe 20% de desconto,Compre agora,48054,974,94,8,1,0.8575
+114,Google Ads,imagem única,pessoa sorrindo,Oferta por tempo limitado,Experimente,1806,31,1,1,0,0.16083333333333333
+115,Meta Ads,vídeo curto,pessoa sorrindo,Vagas abertas,Comece grátis,35157,711,74,9,1,0.7651666666666668
+116,TikTok Ads,carrossel,pessoa sorrindo,Vagas abertas,Saiba mais,1726,38,5,0,0,0.3251428571428571
+117,Google Ads,imagem única,antes/depois,Ganhe 20% de desconto,Compre agora,18764,347,39,4,1,0.5344444444444445
+118,Meta Ads,imagem única,produto,Aprenda do zero,Saiba mais,47542,972,93,4,1,0.6115833333333334
+119,Google Ads,vídeo curto,pessoa sorrindo,Curso online com certificado,Saiba mais,41996,817,71,3,1,0.7953333333333333
+120,TikTok Ads,carrossel,pessoa sorrindo,Oferta por tempo limitado,Saiba mais,2591,38,4,1,0,0.7466309523809522
+121,Meta Ads,imagem única,antes/depois,Oferta por tempo limitado,Experimente,40692,832,88,7,1,0.72
+122,TikTok Ads,carrossel,pessoa sorrindo,Oferta por tempo limitado,Comece grátis,13713,270,30,0,0,0.4182857142857142
+123,TikTok Ads,carrossel,produto,Vagas abertas,Compre agora,11177,218,31,2,0,0.14
+124,Meta Ads,vídeo curto,produto,Aprenda do zero,Experimente,2007,35,4,1,0,0.43799999999999994
+125,Google Ads,vídeo curto,antes/depois,Vagas abertas,Compre agora,14507,273,36,1,0,0.06416666666666666
+126,Meta Ads,carrossel,pessoa sorrindo,Curso online com certificado,Saiba mais,21953,408,34,1,0,0.15083333333333335
+127,Google Ads,vídeo curto,antes/depois,Curso online com certificado,Comece grátis,12745,236,23,1,0,0.07
+128,TikTok Ads,vídeo curto,antes/depois,Vagas abertas,Compre agora,24411,497,38,0,0,0.5087857142857143
+129,Google Ads,imagem única,pessoa sorrindo,Vagas abertas,Comece grátis,35450,677,66,3,1,0.6486904761904762
+130,Google Ads,imagem única,antes/depois,Ganhe 20% de desconto,Compre agora,39158,790,81,2,0,0.5344444444444445
+131,TikTok Ads,vídeo curto,antes/depois,Curso online com certificado,Experimente,18343,348,29,4,1,0.2852857142857143
+132,TikTok Ads,carrossel,pessoa sorrindo,Ganhe 20% de desconto,Experimente,6109,122,12,3,1,0.98
+133,Google Ads,imagem única,pessoa sorrindo,Curso online com certificado,Saiba mais,18773,416,51,3,1,0.7375476190476191
+134,Meta Ads,vídeo curto,pessoa sorrindo,Ganhe 20% de desconto,Experimente,39559,765,77,5,1,0.8000000000000002
+135,Meta Ads,carrossel,pessoa sorrindo,Curso online com certificado,Compre agora,47824,984,94,2,0,0.4760714285714286
+136,TikTok Ads,vídeo curto,produto,Curso online com certificado,Saiba mais,4041,71,11,0,0,0.19266666666666665
+137,Meta Ads,vídeo curto,produto,Ganhe 20% de desconto,Saiba mais,27015,516,64,4,1,0.94
+138,Google Ads,vídeo curto,antes/depois,Oferta por tempo limitado,Experimente,28961,564,55,2,0,0.29
+139,Meta Ads,carrossel,produto,Aprenda do zero,Comece grátis,2560,47,5,0,0,0.16416666666666666
+140,Google Ads,carrossel,produto,Curso online com certificado,Comece grátis,38412,807,79,1,0,0.17
+141,Google Ads,imagem única,antes/depois,Aprenda do zero,Compre agora,47804,971,92,1,0,0.4395000000000001
+142,Google Ads,imagem única,antes/depois,Ganhe 20% de desconto,Experimente,32860,654,68,3,1,0.21895634920634918
+143,Google Ads,carrossel,pessoa sorrindo,Ganhe 20% de desconto,Comece grátis,20975,419,37,0,0,0.5848333333333333
+144,TikTok Ads,imagem única,produto,Aprenda do zero,Compre agora,33781,694,62,2,0,0.13055555555555556
+145,Meta Ads,imagem única,produto,Oferta por tempo limitado,Compre agora,44006,893,97,3,1,0.8118333333333334
+146,Google Ads,carrossel,antes/depois,Curso online com certificado,Compre agora,12083,250,22,1,0,0.09866666666666667
+147,Meta Ads,imagem única,pessoa sorrindo,Aprenda do zero,Experimente,36946,728,81,6,1,0.8816666666666667
+148,Google Ads,vídeo curto,pessoa sorrindo,Aprenda do zero,Saiba mais,17001,338,29,0,0,0.14
+149,Meta Ads,imagem única,pessoa sorrindo,Oferta por tempo limitado,Compre agora,10200,210,20,1,0,0.17166666666666663
+150,Google Ads,vídeo curto,antes/depois,Curso online com certificado,Compre agora,16398,333,36,1,0,0.04333333333333334
+151,Google Ads,carrossel,produto,Aprenda do zero,Comece grátis,43324,834,83,2,0,0.05
+152,Google Ads,carrossel,pessoa sorrindo,Curso online com certificado,Comece grátis,29625,592,54,9,1,0.8516666666666666
+153,TikTok Ads,carrossel,pessoa sorrindo,Ganhe 20% de desconto,Comece grátis,48055,989,94,7,1,0.8666666666666666
+154,Meta Ads,imagem única,pessoa sorrindo,Ganhe 20% de desconto,Experimente,28208,556,50,4,1,0.7683333333333334
+155,Meta Ads,carrossel,antes/depois,Curso online com certificado,Saiba mais,34768,673,73,4,1,0.41975
+156,Google Ads,imagem única,antes/depois,Ganhe 20% de desconto,Experimente,38574,794,67,0,0,0.21895634920634918
+157,Google Ads,vídeo curto,antes/depois,Curso online com certificado,Saiba mais,13040,251,25,1,0,0.10916666666666665
+158,Meta Ads,imagem única,pessoa sorrindo,Curso online com certificado,Compre agora,17353,366,31,2,0,0.11483333333333333
+159,TikTok Ads,carrossel,produto,Aprenda do zero,Comece grátis,25596,523,48,0,0,0.13
+160,Google Ads,imagem única,pessoa sorrindo,Oferta por tempo limitado,Saiba mais,7012,147,10,1,0,0.16107142857142853
+161,Google Ads,carrossel,pessoa sorrindo,Vagas abertas,Experimente,21829,419,41,3,1,0.8536666666666668
+162,Google Ads,imagem única,produto,Vagas abertas,Saiba mais,35566,705,59,0,0,0.09583333333333333
+163,Meta Ads,carrossel,produto,Vagas abertas,Saiba mais,38384,807,77,5,1,0.6933333333333332
+164,Google Ads,imagem única,produto,Oferta por tempo limitado,Compre agora,40575,859,79,4,1,0.5011190476190477
+165,Google Ads,vídeo curto,pessoa sorrindo,Oferta por tempo limitado,Experimente,30344,616,54,3,1,0.9113333333333332
+166,Meta Ads,vídeo curto,produto,Ganhe 20% de desconto,Saiba mais,40420,805,79,5,1,0.94
+167,Meta Ads,carrossel,produto,Vagas abertas,Comece grátis,33496,653,62,4,1,0.9058333333333334
+168,Meta Ads,imagem única,pessoa sorrindo,Aprenda do zero,Comece grátis,32367,656,62,9,1,0.88625
+169,Google Ads,imagem única,antes/depois,Vagas abertas,Experimente,35503,730,77,5,1,0.5425000000000001
+170,Google Ads,vídeo curto,produto,Ganhe 20% de desconto,Comece grátis,10686,231,24,3,1,0.8646666666666667
+171,Google Ads,imagem única,pessoa sorrindo,Ganhe 20% de desconto,Comece grátis,24197,478,48,7,1,0.9541666666666667
+172,Google Ads,carrossel,pessoa sorrindo,Aprenda do zero,Comece grátis,27116,527,52,7,1,0.8816666666666666
+173,Google Ads,imagem única,pessoa sorrindo,Aprenda do zero,Saiba mais,17163,350,42,4,1,0.14166666666666666
+174,Google Ads,imagem única,pessoa sorrindo,Oferta por tempo limitado,Comece grátis,19073,395,51,12,1,0.825
+175,Meta Ads,imagem única,produto,Aprenda do zero,Comece grátis,13329,272,29,1,0,0.6840793650793648
+176,TikTok Ads,carrossel,produto,Oferta por tempo limitado,Experimente,30619,606,54,3,1,0.83
+177,Meta Ads,carrossel,pessoa sorrindo,Curso online com certificado,Compre agora,30984,661,64,3,1,0.4760714285714286
+178,Meta Ads,imagem única,pessoa sorrindo,Vagas abertas,Saiba mais,40905,845,74,2,0,0.09933333333333333
+179,Meta Ads,imagem única,antes/depois,Aprenda do zero,Saiba mais,36262,762,79,5,1,0.9358333333333334
+180,TikTok Ads,carrossel,pessoa sorrindo,Curso online com certificado,Saiba mais,47332,981,108,2,0,0.24333333333333335
+181,Meta Ads,carrossel,produto,Oferta por tempo limitado,Comece grátis,33003,694,72,2,0,0.0535
+182,Meta Ads,carrossel,antes/depois,Curso online com certificado,Comece grátis,33371,663,69,3,1,0.15
+183,Meta Ads,vídeo curto,pessoa sorrindo,Vagas abertas,Saiba mais,5481,106,13,1,0,0.12133333333333333
+184,Meta Ads,vídeo curto,produto,Vagas abertas,Compre agora,23740,481,52,0,0,0.0475
+185,TikTok Ads,imagem única,antes/depois,Ganhe 20% de desconto,Experimente,5798,126,9,0,0,0.01966666666666667
+186,Meta Ads,carrossel,produto,Oferta por tempo limitado,Compre agora,27035,555,50,5,1,0.683690476190476
+187,Google Ads,carrossel,pessoa sorrindo,Ganhe 20% de desconto,Saiba mais,21281,408,49,2,0,0.30861904761904757
+188,TikTok Ads,carrossel,pessoa sorrindo,Ganhe 20% de desconto,Experimente,26431,552,56,4,1,0.98
+189,TikTok Ads,imagem única,pessoa sorrindo,Oferta por tempo limitado,Experimente,36479,704,74,9,1,0.4479999999999999
+190,TikTok Ads,vídeo curto,antes/depois,Oferta por tempo limitado,Experimente,29138,584,69,6,1,0.8426666666666667
+191,Google Ads,vídeo curto,pessoa sorrindo,Ganhe 20% de desconto,Compre agora,32182,652,54,4,1,0.9508333333333333
+192,TikTok Ads,vídeo curto,produto,Vagas abertas,Compre agora,4983,97,14,0,0,0.13616666666666666
+193,Meta Ads,imagem única,antes/depois,Aprenda do zero,Saiba mais,12889,257,32,2,0,0.9358333333333334
+194,Meta Ads,vídeo curto,produto,Ganhe 20% de desconto,Experimente,44950,875,87,5,1,0.3516666666666666
+195,TikTok Ads,vídeo curto,antes/depois,Aprenda do zero,Experimente,29927,588,61,8,1,0.5075952380952381
+196,Meta Ads,vídeo curto,produto,Oferta por tempo limitado,Comece grátis,44285,895,99,5,1,0.436404761904762
+197,Meta Ads,imagem única,produto,Aprenda do zero,Comece grátis,37068,728,69,4,1,0.6840793650793648
+198,TikTok Ads,imagem única,antes/depois,Curso online com certificado,Saiba mais,3520,66,6,1,0,0.509255772005772
+199,Google Ads,carrossel,produto,Curso online com certificado,Saiba mais,36851,698,88,3,1,0.871
+200,Google Ads,vídeo curto,antes/depois,Oferta por tempo limitado,Compre agora,35947,713,78,2,0,0.01
+201,Google Ads,carrossel,pessoa sorrindo,Vagas abertas,Saiba mais,39659,785,77,4,1,0.3784404761904762
+202,Google Ads,vídeo curto,pessoa sorrindo,Curso online com certificado,Comece grátis,44543,898,84,7,1,0.8466666666666666
+203,Google Ads,carrossel,antes/depois,Vagas abertas,Experimente,22817,469,47,2,0,0.11583333333333334
+204,TikTok Ads,carrossel,antes/depois,Aprenda do zero,Compre agora,26051,519,60,2,0,0.47100000000000003
+205,Meta Ads,carrossel,antes/depois,Ganhe 20% de desconto,Saiba mais,31268,698,84,1,0,0.5464999999999999
+206,Meta Ads,vídeo curto,produto,Curso online com certificado,Comece grátis,8999,168,16,1,0,0.03
+207,TikTok Ads,carrossel,produto,Aprenda do zero,Saiba mais,6105,101,3,0,0,0.265
+208,Meta Ads,carrossel,pessoa sorrindo,Aprenda do zero,Experimente,46603,916,92,3,1,0.9718333333333333
+209,Google Ads,vídeo curto,produto,Curso online com certificado,Experimente,35782,707,65,0,0,0.96
+210,Meta Ads,carrossel,produto,Oferta por tempo limitado,Compre agora,48299,945,93,6,1,0.683690476190476
+211,Google Ads,vídeo curto,antes/depois,Vagas abertas,Saiba mais,3539,78,8,2,0,0.1275
+212,Meta Ads,imagem única,antes/depois,Curso online com certificado,Compre agora,19322,367,30,1,0,0.16416666666666666
+213,Meta Ads,imagem única,antes/depois,Ganhe 20% de desconto,Compre agora,34340,701,62,3,1,0.8933333333333333
+214,Google Ads,carrossel,produto,Curso online com certificado,Compre agora,14140,267,23,0,0,0.13666666666666666
+215,TikTok Ads,vídeo curto,pessoa sorrindo,Aprenda do zero,Experimente,25487,500,42,8,1,0.8828333333333335
+216,Google Ads,carrossel,antes/depois,Aprenda do zero,Saiba mais,6774,124,16,2,0,0.19666666666666666
+217,Google Ads,vídeo curto,pessoa sorrindo,Ganhe 20% de desconto,Experimente,40961,832,81,3,1,0.37126190476190474
+218,Meta Ads,carrossel,antes/depois,Aprenda do zero,Comece grátis,14489,279,24,0,0,0.5188333333333331
+219,TikTok Ads,imagem única,pessoa sorrindo,Vagas abertas,Experimente,22384,433,39,3,1,0.4986666666666666
+220,TikTok Ads,carrossel,antes/depois,Oferta por tempo limitado,Compre agora,1282,23,6,0,0,0.22333333333333336
+221,TikTok Ads,imagem única,antes/depois,Vagas abertas,Experimente,26188,524,45,3,1,0.9205
+222,Meta Ads,carrossel,antes/depois,Ganhe 20% de desconto,Comece grátis,43870,844,79,8,1,0.8141666666666666
+223,Meta Ads,vídeo curto,antes/depois,Oferta por tempo limitado,Compre agora,44360,840,84,8,1,0.79
+224,Google Ads,imagem única,pessoa sorrindo,Aprenda do zero,Saiba mais,1645,38,4,1,0,0.14166666666666666
+225,TikTok Ads,imagem única,pessoa sorrindo,Curso online com certificado,Saiba mais,1587,37,5,1,0,0.02333333333333333
+226,Google Ads,carrossel,pessoa sorrindo,Vagas abertas,Comece grátis,46096,870,79,7,1,0.8666666666666667
+227,Google Ads,imagem única,pessoa sorrindo,Aprenda do zero,Comece grátis,41718,853,88,5,1,0.8916666666666667
+228,Meta Ads,vídeo curto,antes/depois,Ganhe 20% de desconto,Experimente,22447,449,44,1,0,0.09
+229,Meta Ads,vídeo curto,antes/depois,Vagas abertas,Comece grátis,29276,576,66,6,1,0.97
+230,TikTok Ads,vídeo curto,pessoa sorrindo,Oferta por tempo limitado,Comece grátis,18761,382,38,0,0,0.5163095238095238
+231,TikTok Ads,imagem única,pessoa sorrindo,Curso online com certificado,Saiba mais,19351,401,44,0,0,0.02333333333333333
+232,Meta Ads,imagem única,produto,Ganhe 20% de desconto,Experimente,12639,240,17,0,0,0.04333333333333333
+233,TikTok Ads,carrossel,produto,Ganhe 20% de desconto,Experimente,9259,190,29,2,0,0.20666666666666667
+234,Google Ads,imagem única,produto,Ganhe 20% de desconto,Experimente,1778,32,5,0,0,0.049666666666666665
+235,Meta Ads,imagem única,pessoa sorrindo,Vagas abertas,Compre agora,31600,638,48,2,0,0.4533333333333332
+236,TikTok Ads,vídeo curto,produto,Aprenda do zero,Saiba mais,43856,895,79,8,1,0.78
+237,TikTok Ads,imagem única,pessoa sorrindo,Oferta por tempo limitado,Experimente,18862,375,40,2,0,0.4479999999999999
+238,Meta Ads,imagem única,pessoa sorrindo,Ganhe 20% de desconto,Saiba mais,7716,171,13,0,0,0.51
+239,Meta Ads,imagem única,pessoa sorrindo,Vagas abertas,Compre agora,30538,594,64,3,1,0.4533333333333332
+240,TikTok Ads,carrossel,pessoa sorrindo,Ganhe 20% de desconto,Saiba mais,30075,592,68,3,1,0.8143333333333332
+241,Meta Ads,vídeo curto,produto,Ganhe 20% de desconto,Compre agora,5912,104,9,0,0,0.2366666666666667
+242,TikTok Ads,imagem única,antes/depois,Vagas abertas,Experimente,35285,705,76,6,1,0.9205
+243,Meta Ads,imagem única,pessoa sorrindo,Aprenda do zero,Compre agora,34755,692,66,2,0,0.10300000000000001
+244,Google Ads,vídeo curto,pessoa sorrindo,Aprenda do zero,Saiba mais,5033,94,10,0,0,0.14
+245,TikTok Ads,imagem única,pessoa sorrindo,Aprenda do zero,Saiba mais,20086,382,34,0,0,0.08
+246,TikTok Ads,vídeo curto,antes/depois,Aprenda do zero,Saiba mais,12777,254,37,6,1,0.9575
+247,TikTok Ads,imagem única,produto,Aprenda do zero,Comece grátis,35624,697,69,5,1,0.7866666666666666
+248,TikTok Ads,carrossel,pessoa sorrindo,Oferta por tempo limitado,Saiba mais,37268,749,83,6,1,0.7466309523809522
+249,TikTok Ads,vídeo curto,antes/depois,Aprenda do zero,Experimente,4134,71,2,0,0,0.5075952380952381
+250,Meta Ads,carrossel,pessoa sorrindo,Curso online com certificado,Experimente,17390,322,38,0,0,0.6624523809523808
+251,TikTok Ads,carrossel,antes/depois,Oferta por tempo limitado,Comece grátis,12738,264,29,2,0,0.07666666666666666
+252,Meta Ads,carrossel,produto,Ganhe 20% de desconto,Comece grátis,19284,439,46,1,0,0.5041666666666668
+253,Google Ads,vídeo curto,antes/depois,Curso online com certificado,Comece grátis,19693,377,36,0,0,0.07
+254,Google Ads,carrossel,pessoa sorrindo,Oferta por tempo limitado,Comece grátis,31403,604,64,12,1,0.9736666666666666
+255,Meta Ads,carrossel,pessoa sorrindo,Vagas abertas,Compre agora,2932,69,6,0,0,0.25271428571428567
+256,Google Ads,vídeo curto,produto,Ganhe 20% de desconto,Compre agora,17766,334,30,5,1,0.645547619047619
+257,Google Ads,carrossel,produto,Ganhe 20% de desconto,Experimente,20218,400,36,2,0,0.03
+258,Google Ads,vídeo curto,antes/depois,Oferta por tempo limitado,Compre agora,25842,518,44,2,0,0.01
+259,Google Ads,imagem única,pessoa sorrindo,Aprenda do zero,Compre agora,30689,541,50,2,0,0.003333333333333333
+260,Meta Ads,imagem única,produto,Oferta por tempo limitado,Comece grátis,40410,805,84,6,1,0.7916190476190476
+261,TikTok Ads,imagem única,pessoa sorrindo,Ganhe 20% de desconto,Compre agora,41510,856,90,8,1,0.8478333333333333
+262,TikTok Ads,carrossel,produto,Vagas abertas,Saiba mais,37674,799,83,6,1,0.3561666666666667
+263,TikTok Ads,vídeo curto,produto,Ganhe 20% de desconto,Saiba mais,28810,542,49,6,1,0.8909999999999999
+264,TikTok Ads,imagem única,antes/depois,Ganhe 20% de desconto,Experimente,11433,221,25,1,0,0.01966666666666667
+265,TikTok Ads,carrossel,antes/depois,Oferta por tempo limitado,Comece grátis,42869,806,66,1,0,0.07666666666666666
+266,Google Ads,vídeo curto,produto,Curso online com certificado,Experimente,41123,793,77,6,1,0.96
+267,Meta Ads,vídeo curto,antes/depois,Oferta por tempo limitado,Saiba mais,24782,515,41,2,0,0.17
+268,Google Ads,carrossel,produto,Curso online com certificado,Experimente,42971,867,74,6,1,0.87
+269,Google Ads,carrossel,antes/depois,Curso online com certificado,Saiba mais,49766,952,105,5,1,0.7183333333333333
+270,Google Ads,carrossel,produto,Ganhe 20% de desconto,Comece grátis,15087,293,33,1,0,0.06833333333333333
+271,TikTok Ads,vídeo curto,pessoa sorrindo,Ganhe 20% de desconto,Comece grátis,6793,130,17,2,0,0.3543333333333333
+272,Meta Ads,imagem única,produto,Aprenda do zero,Comece grátis,44408,916,92,6,1,0.6840793650793648
+273,TikTok Ads,carrossel,antes/depois,Vagas abertas,Compre agora,16372,327,30,4,1,0.765
+274,TikTok Ads,imagem única,pessoa sorrindo,Aprenda do zero,Comece grátis,2316,43,8,0,0,0.276
+275,Google Ads,imagem única,antes/depois,Curso online com certificado,Experimente,6355,110,8,0,0,0.12066666666666666
+276,Google Ads,vídeo curto,produto,Ganhe 20% de desconto,Compre agora,31154,611,57,5,1,0.645547619047619
+277,Meta Ads,carrossel,antes/depois,Aprenda do zero,Saiba mais,17923,332,46,2,0,0.477
+278,TikTok Ads,imagem única,pessoa sorrindo,Curso online com certificado,Compre agora,3100,54,4,1,0,0.2033333333333333
+279,Google Ads,imagem única,antes/depois,Ganhe 20% de desconto,Experimente,20643,405,32,1,0,0.21895634920634918
+280,TikTok Ads,carrossel,antes/depois,Vagas abertas,Saiba mais,49861,1018,109,4,1,0.5085000000000001
+281,Google Ads,vídeo curto,produto,Aprenda do zero,Compre agora,7155,137,15,3,1,0.7166666666666666
+282,TikTok Ads,vídeo curto,antes/depois,Ganhe 20% de desconto,Experimente,24303,474,38,2,0,0.20833333333333331
+283,Google Ads,vídeo curto,pessoa sorrindo,Ganhe 20% de desconto,Compre agora,22729,452,38,4,1,0.9508333333333333
+284,Google Ads,imagem única,antes/depois,Vagas abertas,Experimente,17616,337,31,1,0,0.5425000000000001
+285,TikTok Ads,vídeo curto,antes/depois,Aprenda do zero,Comece grátis,34840,630,56,6,1,0.8966666666666666
+286,Meta Ads,carrossel,pessoa sorrindo,Aprenda do zero,Experimente,48562,949,92,4,1,0.9718333333333333
+287,Google Ads,carrossel,pessoa sorrindo,Vagas abertas,Saiba mais,45605,897,75,1,0,0.3784404761904762
+288,Meta Ads,carrossel,produto,Vagas abertas,Experimente,28882,616,63,1,0,0.5401666666666667
+289,Meta Ads,vídeo curto,antes/depois,Curso online com certificado,Saiba mais,6451,129,14,0,0,0.05
+290,TikTok Ads,carrossel,produto,Curso online com certificado,Saiba mais,26372,576,56,4,1,0.29416666666666663
+291,TikTok Ads,vídeo curto,produto,Ganhe 20% de desconto,Comece grátis,32312,629,63,4,1,0.875
+292,Google Ads,carrossel,antes/depois,Oferta por tempo limitado,Compre agora,5967,114,6,0,0,0.11166666666666666
+293,Meta Ads,imagem única,pessoa sorrindo,Curso online com certificado,Experimente,41695,892,95,4,1,0.815
+294,Meta Ads,vídeo curto,pessoa sorrindo,Oferta por tempo limitado,Comece grátis,21058,412,31,5,1,0.4841666666666666
+295,Meta Ads,vídeo curto,produto,Oferta por tempo limitado,Comece grátis,21584,406,37,1,0,0.436404761904762
+296,TikTok Ads,imagem única,antes/depois,Oferta por tempo limitado,Compre agora,11521,242,23,3,1,0.8975
+297,TikTok Ads,carrossel,pessoa sorrindo,Vagas abertas,Saiba mais,10065,222,18,0,0,0.3251428571428571
+298,Meta Ads,vídeo curto,antes/depois,Aprenda do zero,Saiba mais,21954,404,35,3,1,0.86
+299,Meta Ads,vídeo curto,pessoa sorrindo,Aprenda do zero,Saiba mais,20991,406,38,4,1,0.7046428571428572
+300,Meta Ads,vídeo curto,produto,Vagas abertas,Saiba mais,33252,668,55,1,0,0.06
+301,TikTok Ads,carrossel,pessoa sorrindo,Vagas abertas,Experimente,39578,784,76,4,1,0.8748333333333334
+302,Google Ads,imagem única,pessoa sorrindo,Vagas abertas,Comece grátis,36517,725,78,5,1,0.6486904761904762
+303,Google Ads,vídeo curto,produto,Aprenda do zero,Comece grátis,29884,627,67,4,1,0.9095
+304,TikTok Ads,vídeo curto,produto,Ganhe 20% de desconto,Compre agora,4551,88,9,0,0,0.5928333333333333
+305,Google Ads,imagem única,antes/depois,Vagas abertas,Compre agora,3800,62,5,1,0,0.2404404761904762
+306,Meta Ads,carrossel,antes/depois,Oferta por tempo limitado,Saiba mais,26582,543,37,3,1,0.8381666666666666
+307,Google Ads,imagem única,pessoa sorrindo,Vagas abertas,Saiba mais,2363,40,2,0,0,0.4492380952380954
+308,TikTok Ads,carrossel,pessoa sorrindo,Oferta por tempo limitado,Comece grátis,19919,409,37,1,0,0.4182857142857142
+309,TikTok Ads,carrossel,pessoa sorrindo,Oferta por tempo limitado,Comece grátis,33298,682,73,10,1,0.4182857142857142
+310,TikTok Ads,vídeo curto,pessoa sorrindo,Vagas abertas,Experimente,42334,844,82,8,1,0.5216904761904761
+311,TikTok Ads,carrossel,pessoa sorrindo,Oferta por tempo limitado,Compre agora,17523,371,42,0,0,0.17273809523809525
+312,Meta Ads,vídeo curto,pessoa sorrindo,Curso online com certificado,Experimente,17402,312,32,5,1,0.9725
+313,Google Ads,carrossel,antes/depois,Oferta por tempo limitado,Experimente,38623,843,99,1,0,0.13904761904761903
+314,Google Ads,carrossel,pessoa sorrindo,Curso online com certificado,Compre agora,17901,352,33,2,0,0.16333333333333336
+315,TikTok Ads,imagem única,antes/depois,Ganhe 20% de desconto,Experimente,40930,837,78,2,0,0.01966666666666667
+316,Meta Ads,vídeo curto,produto,Aprenda do zero,Comece grátis,47005,972,91,5,1,0.6018690476190477
+317,Meta Ads,carrossel,antes/depois,Oferta por tempo limitado,Saiba mais,46536,951,107,0,0,0.8381666666666666
+318,Google Ads,imagem única,antes/depois,Curso online com certificado,Compre agora,16438,307,24,1,0,0.6625595238095238
+319,Meta Ads,carrossel,pessoa sorrindo,Vagas abertas,Experimente,38164,794,78,3,1,0.8641666666666667
+320,Google Ads,imagem única,produto,Curso online com certificado,Experimente,9367,169,19,0,0,0.18583333333333335
+321,TikTok Ads,vídeo curto,pessoa sorrindo,Ganhe 20% de desconto,Experimente,30315,601,53,6,1,0.8270000000000001
+322,Meta Ads,imagem única,pessoa sorrindo,Curso online com certificado,Saiba mais,29327,591,50,0,0,0.036000000000000004
+323,Google Ads,imagem única,pessoa sorrindo,Vagas abertas,Comece grátis,48399,972,94,9,1,0.6486904761904762
+324,Google Ads,carrossel,antes/depois,Curso online com certificado,Saiba mais,5370,118,14,0,0,0.7183333333333333
+325,TikTok Ads,carrossel,pessoa sorrindo,Oferta por tempo limitado,Saiba mais,26069,503,53,5,1,0.7466309523809522
+326,Google Ads,imagem única,produto,Oferta por tempo limitado,Compre agora,21025,406,34,1,0,0.5011190476190477
+327,Google Ads,vídeo curto,produto,Ganhe 20% de desconto,Compre agora,29927,603,58,2,0,0.645547619047619
+328,Meta Ads,vídeo curto,produto,Curso online com certificado,Compre agora,2637,54,2,0,0,0.01
+329,TikTok Ads,imagem única,produto,Oferta por tempo limitado,Compre agora,16954,335,37,2,0,0.31998412698412687
+330,TikTok Ads,vídeo curto,pessoa sorrindo,Vagas abertas,Compre agora,27489,527,68,6,1,0.44083333333333335
+331,Meta Ads,carrossel,produto,Ganhe 20% de desconto,Compre agora,40740,814,92,7,1,0.8384999999999999
+332,TikTok Ads,carrossel,antes/depois,Ganhe 20% de desconto,Experimente,25527,484,47,3,1,0.76
+333,TikTok Ads,imagem única,produto,Aprenda do zero,Comece grátis,6520,133,11,0,0,0.7866666666666666
+334,Google Ads,carrossel,pessoa sorrindo,Oferta por tempo limitado,Experimente,42458,848,84,4,1,0.703
+335,TikTok Ads,vídeo curto,produto,Oferta por tempo limitado,Saiba mais,4453,107,11,0,0,0.2535
+336,Google Ads,carrossel,pessoa sorrindo,Oferta por tempo limitado,Comece grátis,38865,762,75,7,1,0.9736666666666666
+337,Meta Ads,vídeo curto,pessoa sorrindo,Ganhe 20% de desconto,Compre agora,12164,234,23,0,0,0.26
+338,Google Ads,carrossel,pessoa sorrindo,Oferta por tempo limitado,Comece grátis,34584,635,68,9,1,0.9736666666666666
+339,Google Ads,imagem única,antes/depois,Aprenda do zero,Comece grátis,37584,764,86,4,1,0.9366666666666668
+340,Google Ads,vídeo curto,pessoa sorrindo,Ganhe 20% de desconto,Experimente,44442,899,84,2,0,0.37126190476190474
+341,Google Ads,vídeo curto,pessoa sorrindo,Ganhe 20% de desconto,Compre agora,48937,960,87,1,0,0.9508333333333333
+342,Google Ads,vídeo curto,antes/depois,Oferta por tempo limitado,Saiba mais,23335,473,52,0,0,0.036333333333333336
+343,TikTok Ads,vídeo curto,antes/depois,Oferta por tempo limitado,Saiba mais,34665,716,60,8,1,0.7195
+344,Meta Ads,vídeo curto,pessoa sorrindo,Aprenda do zero,Experimente,17633,363,38,3,1,0.93
+345,Meta Ads,vídeo curto,pessoa sorrindo,Oferta por tempo limitado,Experimente,36386,729,58,5,1,0.83
+346,Google Ads,vídeo curto,antes/depois,Oferta por tempo limitado,Compre agora,1489,31,4,0,0,0.01
+347,Google Ads,carrossel,pessoa sorrindo,Vagas abertas,Comece grátis,17999,368,37,7,1,0.8666666666666667
+348,Google Ads,vídeo curto,antes/depois,Ganhe 20% de desconto,Saiba mais,7539,157,22,1,0,0.2395
+349,TikTok Ads,carrossel,produto,Ganhe 20% de desconto,Comece grátis,13226,284,25,0,0,0.15266666666666664
+350,TikTok Ads,carrossel,produto,Vagas abertas,Comece grátis,8957,162,20,1,0,0.05
+351,Meta Ads,vídeo curto,produto,Aprenda do zero,Saiba mais,23867,481,46,0,0,0.2858333333333334
+352,Google Ads,imagem única,antes/depois,Vagas abertas,Experimente,34457,669,66,4,1,0.5425000000000001
+353,TikTok Ads,vídeo curto,pessoa sorrindo,Curso online com certificado,Saiba mais,22372,447,34,2,0,0.09833333333333333
+354,TikTok Ads,vídeo curto,pessoa sorrindo,Vagas abertas,Compre agora,47067,975,94,2,0,0.44083333333333335
+355,TikTok Ads,vídeo curto,produto,Curso online com certificado,Compre agora,31926,674,84,8,1,0.38683333333333336
+356,Meta Ads,vídeo curto,pessoa sorrindo,Aprenda do zero,Compre agora,5478,103,11,1,0,0.3529761904761905
+357,Meta Ads,vídeo curto,produto,Curso online com certificado,Comece grátis,4262,76,13,1,0,0.03
+358,Meta Ads,imagem única,produto,Aprenda do zero,Saiba mais,26613,515,50,1,0,0.6115833333333334
+359,TikTok Ads,imagem única,antes/depois,Ganhe 20% de desconto,Comece grátis,20288,432,41,2,0,0.315
+360,Meta Ads,vídeo curto,produto,Curso online com certificado,Comece grátis,46148,821,81,2,0,0.03
+361,Google Ads,vídeo curto,produto,Aprenda do zero,Saiba mais,3690,56,8,0,0,0.27166666666666667
+362,TikTok Ads,carrossel,produto,Oferta por tempo limitado,Experimente,12413,230,20,2,0,0.83
+363,Meta Ads,vídeo curto,produto,Oferta por tempo limitado,Comece grátis,26530,555,60,4,1,0.436404761904762
+364,Google Ads,vídeo curto,antes/depois,Aprenda do zero,Compre agora,17848,354,34,0,0,0.055
+365,Google Ads,vídeo curto,pessoa sorrindo,Ganhe 20% de desconto,Experimente,33093,655,73,2,0,0.37126190476190474
+366,TikTok Ads,vídeo curto,produto,Curso online com certificado,Experimente,20539,452,44,2,0,0.14
+367,TikTok Ads,imagem única,produto,Aprenda do zero,Saiba mais,45571,900,89,6,1,0.7591666666666668
+368,TikTok Ads,vídeo curto,produto,Curso online com certificado,Comece grátis,46066,920,87,8,1,0.7383333333333334
+369,Google Ads,carrossel,antes/depois,Aprenda do zero,Experimente,39230,765,73,1,0,0.01
+370,Google Ads,carrossel,pessoa sorrindo,Vagas abertas,Compre agora,29018,633,68,1,0,0.6472142857142856
+371,Google Ads,imagem única,pessoa sorrindo,Ganhe 20% de desconto,Experimente,29378,600,54,1,0,0.4921666666666667
+372,Google Ads,vídeo curto,antes/depois,Ganhe 20% de desconto,Experimente,36303,689,66,4,1,0.6528333333333333
+373,TikTok Ads,carrossel,produto,Aprenda do zero,Experimente,47151,934,88,3,1,0.775
+374,Meta Ads,carrossel,antes/depois,Aprenda do zero,Comece grátis,7901,169,23,3,1,0.5188333333333331
+375,TikTok Ads,carrossel,pessoa sorrindo,Oferta por tempo limitado,Saiba mais,15079,287,34,3,1,0.7466309523809522
+376,Google Ads,carrossel,pessoa sorrindo,Ganhe 20% de desconto,Comece grátis,38588,793,86,12,1,0.5848333333333333
+377,Meta Ads,carrossel,pessoa sorrindo,Aprenda do zero,Experimente,1336,21,2,0,0,0.9718333333333333
+378,Meta Ads,imagem única,produto,Curso online com certificado,Comece grátis,41214,835,76,3,1,0.7661190476190477
+379,TikTok Ads,imagem única,pessoa sorrindo,Vagas abertas,Experimente,28649,548,55,2,0,0.4986666666666666
+380,TikTok Ads,vídeo curto,pessoa sorrindo,Vagas abertas,Experimente,40760,821,95,2,0,0.5216904761904761
+381,Google Ads,imagem única,pessoa sorrindo,Aprenda do zero,Compre agora,20456,408,57,5,1,0.003333333333333333
+382,TikTok Ads,imagem única,antes/depois,Curso online com certificado,Saiba mais,29810,604,59,5,1,0.509255772005772
+383,Meta Ads,vídeo curto,produto,Curso online com certificado,Saiba mais,26068,504,58,6,1,0.7633333333333333
+384,Meta Ads,vídeo curto,antes/depois,Aprenda do zero,Comece grátis,10221,186,23,3,1,0.9079999999999999
+385,TikTok Ads,vídeo curto,produto,Curso online com certificado,Compre agora,12939,257,23,2,0,0.38683333333333336
+386,Meta Ads,vídeo curto,pessoa sorrindo,Curso online com certificado,Saiba mais,14255,246,21,0,0,0.1825
+387,TikTok Ads,vídeo curto,antes/depois,Vagas abertas,Compre agora,32521,663,56,6,1,0.5087857142857143
+388,Meta Ads,carrossel,antes/depois,Oferta por tempo limitado,Experimente,22698,434,41,3,1,0.695
+389,TikTok Ads,carrossel,antes/depois,Curso online com certificado,Comece grátis,13721,267,24,0,0,0.065
+390,Meta Ads,carrossel,antes/depois,Curso online com certificado,Compre agora,30523,613,62,2,0,0.466
+391,Meta Ads,vídeo curto,produto,Ganhe 20% de desconto,Compre agora,17260,362,41,2,0,0.2366666666666667
+392,Google Ads,imagem única,antes/depois,Oferta por tempo limitado,Experimente,11377,241,28,2,0,0.14583333333333331
+393,TikTok Ads,imagem única,produto,Vagas abertas,Compre agora,48159,934,86,6,1,0.7008888888888889
+394,TikTok Ads,vídeo curto,produto,Oferta por tempo limitado,Experimente,35393,736,74,2,0,0.19
+395,TikTok Ads,carrossel,pessoa sorrindo,Curso online com certificado,Comece grátis,2587,46,3,1,0,0.15583333333333335
+396,Google Ads,imagem única,pessoa sorrindo,Ganhe 20% de desconto,Comece grátis,7837,177,12,3,1,0.9541666666666667
+397,Google Ads,carrossel,antes/depois,Ganhe 20% de desconto,Compre agora,9848,207,27,1,0,0.44891666666666663
+398,Google Ads,carrossel,antes/depois,Vagas abertas,Comece grátis,10968,225,13,1,0,0.11
+399,Google Ads,carrossel,pessoa sorrindo,Ganhe 20% de desconto,Saiba mais,25366,519,49,6,1,0.30861904761904757
+400,TikTok Ads,imagem única,pessoa sorrindo,Vagas abertas,Comece grátis,8566,156,14,1,0,0.07
+401,TikTok Ads,carrossel,pessoa sorrindo,Vagas abertas,Compre agora,48466,894,74,2,0,0.034
+402,Google Ads,carrossel,antes/depois,Aprenda do zero,Experimente,14699,309,32,2,0,0.01
+403,TikTok Ads,imagem única,antes/depois,Vagas abertas,Saiba mais,37343,761,81,2,0,0.2738888888888889
+404,Meta Ads,carrossel,produto,Curso online com certificado,Compre agora,28356,573,46,1,0,0.1875
+405,TikTok Ads,imagem única,antes/depois,Curso online com certificado,Saiba mais,7009,152,16,0,0,0.509255772005772
+406,TikTok Ads,vídeo curto,antes/depois,Oferta por tempo limitado,Saiba mais,5906,138,13,2,0,0.7195
+407,Meta Ads,imagem única,produto,Oferta por tempo limitado,Saiba mais,21435,425,35,1,0,0.2694047619047619
+408,Meta Ads,imagem única,antes/depois,Curso online com certificado,Comece grátis,20630,417,52,1,0,0.5635714285714285
+409,Google Ads,vídeo curto,pessoa sorrindo,Curso online com certificado,Saiba mais,26592,560,65,2,0,0.7953333333333333
+410,TikTok Ads,carrossel,produto,Oferta por tempo limitado,Comece grátis,7548,154,13,0,0,0.13783333333333334
+411,Meta Ads,carrossel,produto,Oferta por tempo limitado,Comece grátis,9378,211,25,1,0,0.0535
+412,Google Ads,carrossel,pessoa sorrindo,Aprenda do zero,Comece grátis,40553,785,74,3,1,0.8816666666666666
+413,TikTok Ads,imagem única,produto,Oferta por tempo limitado,Compre agora,17848,338,29,3,1,0.31998412698412687
+414,Meta Ads,carrossel,antes/depois,Curso online com certificado,Comece grátis,35172,718,75,2,0,0.15
+415,TikTok Ads,carrossel,pessoa sorrindo,Vagas abertas,Comece grátis,25860,515,55,5,1,0.34161904761904766
+416,Meta Ads,imagem única,produto,Aprenda do zero,Saiba mais,35578,753,72,6,1,0.6115833333333334
+417,Google Ads,vídeo curto,pessoa sorrindo,Oferta por tempo limitado,Comece grátis,32301,629,65,7,1,0.9049999999999998
+418,Meta Ads,vídeo curto,pessoa sorrindo,Curso online com certificado,Experimente,45331,853,74,8,1,0.9725
+419,Meta Ads,carrossel,antes/depois,Oferta por tempo limitado,Compre agora,36230,721,67,3,1,0.8290476190476191
+420,TikTok Ads,imagem única,produto,Vagas abertas,Comece grátis,32831,635,73,6,1,0.91
+421,Google Ads,imagem única,antes/depois,Aprenda do zero,Compre agora,24238,462,47,6,1,0.4395000000000001
+422,TikTok Ads,vídeo curto,antes/depois,Vagas abertas,Comece grátis,3537,56,7,0,0,0.2783333333333333
+423,Meta Ads,carrossel,produto,Aprenda do zero,Saiba mais,5873,112,12,1,0,0.16516666666666666
+424,Meta Ads,carrossel,antes/depois,Vagas abertas,Saiba mais,41469,798,68,2,0,0.11
+425,Meta Ads,imagem única,produto,Aprenda do zero,Experimente,22067,417,50,4,1,0.7426666666666667
+426,Google Ads,imagem única,pessoa sorrindo,Vagas abertas,Saiba mais,12085,253,29,3,1,0.4492380952380954
+427,Google Ads,carrossel,produto,Aprenda do zero,Compre agora,15541,330,24,1,0,0.1758333333333333
+428,TikTok Ads,vídeo curto,pessoa sorrindo,Oferta por tempo limitado,Experimente,6060,104,12,0,0,0.31057142857142855
+429,Google Ads,imagem única,antes/depois,Vagas abertas,Comece grátis,39687,801,76,4,1,0.831190476190476
+430,Meta Ads,vídeo curto,produto,Oferta por tempo limitado,Compre agora,41222,818,84,6,1,0.8216666666666668
+431,Meta Ads,imagem única,antes/depois,Aprenda do zero,Comece grátis,49328,983,99,10,1,0.8723333333333333
+432,TikTok Ads,vídeo curto,pessoa sorrindo,Ganhe 20% de desconto,Experimente,8754,189,13,4,1,0.8270000000000001
+433,TikTok Ads,vídeo curto,pessoa sorrindo,Curso online com certificado,Compre agora,25704,510,53,2,0,0.10883333333333335
+434,Meta Ads,vídeo curto,antes/depois,Vagas abertas,Comece grátis,36912,726,78,4,1,0.97
+435,Google Ads,imagem única,produto,Oferta por tempo limitado,Comece grátis,18241,352,36,0,0,0.165
+436,Google Ads,vídeo curto,antes/depois,Oferta por tempo limitado,Saiba mais,16882,322,36,1,0,0.036333333333333336
+437,TikTok Ads,carrossel,pessoa sorrindo,Oferta por tempo limitado,Experimente,31771,594,56,3,1,0.838404761904762
+438,Google Ads,vídeo curto,antes/depois,Vagas abertas,Compre agora,34367,690,70,3,1,0.06416666666666666
+439,Meta Ads,imagem única,produto,Vagas abertas,Comece grátis,49291,996,112,3,1,0.8876666666666666
+440,Google Ads,imagem única,pessoa sorrindo,Ganhe 20% de desconto,Comece grátis,28241,576,64,5,1,0.9541666666666667
+441,Meta Ads,imagem única,produto,Ganhe 20% de desconto,Saiba mais,18576,371,34,3,1,0.5583333333333332
+442,Google Ads,imagem única,pessoa sorrindo,Aprenda do zero,Compre agora,2539,56,2,0,0,0.003333333333333333
+443,TikTok Ads,carrossel,produto,Ganhe 20% de desconto,Compre agora,33263,649,56,3,1,0.7924999999999999
+444,Meta Ads,carrossel,pessoa sorrindo,Curso online com certificado,Experimente,28151,559,58,3,1,0.6624523809523808
+445,Google Ads,carrossel,produto,Ganhe 20% de desconto,Experimente,8837,169,22,1,0,0.03
+446,TikTok Ads,carrossel,pessoa sorrindo,Vagas abertas,Compre agora,11073,263,29,0,0,0.034
+447,TikTok Ads,carrossel,antes/depois,Vagas abertas,Saiba mais,8933,151,15,1,0,0.5085000000000001
+448,Meta Ads,carrossel,produto,Oferta por tempo limitado,Comece grátis,18653,347,39,2,0,0.0535
+449,Google Ads,vídeo curto,pessoa sorrindo,Aprenda do zero,Saiba mais,19690,386,32,1,0,0.14
+450,TikTok Ads,carrossel,pessoa sorrindo,Curso online com certificado,Experimente,19565,400,38,3,1,0.22316666666666662
+451,Google Ads,vídeo curto,antes/depois,Ganhe 20% de desconto,Compre agora,38292,745,85,3,1,0.4392142857142858
+452,TikTok Ads,vídeo curto,pessoa sorrindo,Oferta por tempo limitado,Comece grátis,47418,897,67,6,1,0.5163095238095238
+453,Meta Ads,vídeo curto,antes/depois,Vagas abertas,Comece grátis,30831,628,47,5,1,0.97
+454,Google Ads,imagem única,antes/depois,Curso online com certificado,Compre agora,45439,925,92,4,1,0.6625595238095238
+455,Meta Ads,imagem única,pessoa sorrindo,Curso online com certificado,Experimente,29112,572,59,1,0,0.815
+456,Meta Ads,carrossel,antes/depois,Vagas abertas,Comece grátis,39417,836,81,2,0,0.275
+457,Meta Ads,vídeo curto,antes/depois,Ganhe 20% de desconto,Experimente,8235,169,24,1,0,0.09
+458,Meta Ads,vídeo curto,produto,Vagas abertas,Compre agora,49664,958,92,2,0,0.0475
+459,Meta Ads,vídeo curto,antes/depois,Aprenda do zero,Comece grátis,30809,628,73,4,1,0.9079999999999999
+460,Meta Ads,carrossel,produto,Vagas abertas,Experimente,46760,910,84,3,1,0.5401666666666667
+461,TikTok Ads,vídeo curto,antes/depois,Ganhe 20% de desconto,Comece grátis,46747,952,93,8,1,0.83
+462,Google Ads,carrossel,pessoa sorrindo,Aprenda do zero,Saiba mais,40439,815,91,4,1,0.7083333333333333
+463,TikTok Ads,carrossel,antes/depois,Oferta por tempo limitado,Experimente,32658,674,85,3,1,0.8157142857142857
+464,Google Ads,imagem única,pessoa sorrindo,Oferta por tempo limitado,Compre agora,4159,87,8,1,0,0.05
+465,Meta Ads,vídeo curto,produto,Oferta por tempo limitado,Compre agora,35924,738,61,3,1,0.8216666666666668
+466,Meta Ads,imagem única,produto,Vagas abertas,Experimente,9219,197,10,0,0,0.215
+467,Google Ads,imagem única,pessoa sorrindo,Vagas abertas,Comece grátis,3881,102,10,0,0,0.6486904761904762
+468,Meta Ads,carrossel,pessoa sorrindo,Aprenda do zero,Compre agora,23499,466,43,1,0,0.4376428571428572
+469,Google Ads,imagem única,antes/depois,Oferta por tempo limitado,Compre agora,6618,134,10,0,0,0.15666666666666665
+470,Meta Ads,vídeo curto,produto,Curso online com certificado,Compre agora,42004,863,78,1,0,0.01
+471,Google Ads,carrossel,produto,Ganhe 20% de desconto,Experimente,22435,434,47,2,0,0.03
+472,TikTok Ads,imagem única,pessoa sorrindo,Vagas abertas,Experimente,10873,198,16,0,0,0.4986666666666666
+473,Meta Ads,vídeo curto,antes/depois,Ganhe 20% de desconto,Saiba mais,39498,825,82,3,1,0.8658333333333332
+474,TikTok Ads,imagem única,antes/depois,Curso online com certificado,Saiba mais,43598,937,103,6,1,0.509255772005772
+475,TikTok Ads,imagem única,produto,Aprenda do zero,Saiba mais,2605,60,4,0,0,0.7591666666666668
+476,TikTok Ads,imagem única,antes/depois,Oferta por tempo limitado,Experimente,1893,35,6,0,0,0.265
+477,Google Ads,imagem única,antes/depois,Oferta por tempo limitado,Comece grátis,6586,158,14,0,0,0.6033333333333334
+478,Google Ads,vídeo curto,produto,Oferta por tempo limitado,Experimente,10947,231,23,3,1,0.81
+479,Meta Ads,vídeo curto,antes/depois,Curso online com certificado,Saiba mais,18297,324,35,2,0,0.05
+480,Google Ads,carrossel,antes/depois,Oferta por tempo limitado,Saiba mais,43267,820,82,5,1,0.6375476190476188
+481,Meta Ads,vídeo curto,produto,Oferta por tempo limitado,Comece grátis,27220,577,50,2,0,0.436404761904762
+482,Meta Ads,carrossel,antes/depois,Aprenda do zero,Comece grátis,47202,915,97,4,1,0.5188333333333331
+483,Google Ads,imagem única,antes/depois,Aprenda do zero,Comece grátis,9802,183,23,2,0,0.9366666666666668
+484,Google Ads,vídeo curto,produto,Curso online com certificado,Saiba mais,6454,124,16,0,0,0.5055833333333335
+485,Google Ads,vídeo curto,antes/depois,Vagas abertas,Compre agora,34751,755,80,3,1,0.06416666666666666
+486,Google Ads,carrossel,pessoa sorrindo,Vagas abertas,Saiba mais,28125,592,57,1,0,0.3784404761904762
+487,Meta Ads,vídeo curto,produto,Curso online com certificado,Compre agora,16960,356,32,2,0,0.01
+488,Google Ads,imagem única,antes/depois,Ganhe 20% de desconto,Experimente,37993,719,84,0,0,0.21895634920634918
+489,Meta Ads,vídeo curto,pessoa sorrindo,Vagas abertas,Experimente,40620,828,71,2,0,0.20666666666666664
+490,TikTok Ads,carrossel,antes/depois,Vagas abertas,Saiba mais,36693,755,72,3,1,0.5085000000000001
+491,TikTok Ads,imagem única,produto,Oferta por tempo limitado,Comece grátis,35335,747,74,5,1,0.552
+492,Meta Ads,imagem única,pessoa sorrindo,Curso online com certificado,Saiba mais,7256,147,15,2,0,0.036000000000000004
+493,Google Ads,vídeo curto,produto,Oferta por tempo limitado,Saiba mais,38729,755,75,5,1,0.7326666666666667
+494,Google Ads,carrossel,produto,Ganhe 20% de desconto,Experimente,29464,603,62,0,0,0.03
+495,TikTok Ads,carrossel,antes/depois,Oferta por tempo limitado,Saiba mais,13197,294,24,1,0,0.5851904761904761
+496,TikTok Ads,vídeo curto,antes/depois,Ganhe 20% de desconto,Comece grátis,30245,587,65,12,1,0.83
+497,Google Ads,carrossel,antes/depois,Curso online com certificado,Compre agora,28094,535,49,1,0,0.09866666666666667
+498,Meta Ads,carrossel,antes/depois,Curso online com certificado,Compre agora,30491,626,61,4,1,0.466
+499,Meta Ads,vídeo curto,pessoa sorrindo,Curso online com certificado,Experimente,45643,912,94,4,1,0.9725
