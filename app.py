@@ -1,12 +1,20 @@
-# app.py
-import streamlit as st
-import pandas as pd
-import plotly.graph_objects as go
-import plotly.express as px
-import numpy as np
-from datetime import datetime, timedelta
-import io
+# 🚀 Instalação forçada de dependências (obrigatório para o Streamlit Cloud)
+import subprocess
+import sys
+import importlib
 
+def install_and_import(package):
+    try:
+        importlib.import_module(package)
+    except ImportError:
+        subprocess.check_call([sys.executable, "-m", "pip", "install", package])
+    finally:
+        globals()[package] = importlib.import_module(package)
+
+# Instalar e importar as bibliotecas essenciais
+install_and_import('plotly')
+install_and_import('pandas')
+install_and_import('numpy')
 # ===================================
 # 🔮 ESTILO CSS COMPLETO (seu código)
 # ===================================
