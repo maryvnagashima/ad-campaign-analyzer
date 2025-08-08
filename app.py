@@ -1,4 +1,4 @@
-# 🚀 Instalação forçada de dependências (obrigatório para o Streamlit Cloud)
+# 1. Instalação forçada
 import subprocess
 import sys
 import importlib
@@ -11,10 +11,18 @@ def install_and_import(package):
     finally:
         globals()[package] = importlib.import_module(package)
 
-# Instalar e importar as bibliotecas essenciais
 install_and_import('plotly')
 install_and_import('pandas')
 install_and_import('numpy')
+
+# 2. Agora importe normalmente
+import streamlit as st
+import plotly.graph_objects as go
+import plotly.express as px
+import pandas as pd
+import numpy as np
+
+# 3. Resto do seu código (CSS, funções, etc)
 # ===================================
 # 🔮 ESTILO CSS COMPLETO (seu código)
 # ===================================
