@@ -1,0 +1,130 @@
+/* style.css */
+:root {
+    --primary-color: #00FFFF;
+    --secondary-color: #0080FF;
+    --accent-color: #40E0D0;
+    --success-color: #00FF80;
+    --warning-color: #FFD700;
+    --danger-color: #FF4444;
+    --dark-bg: #0a0b1e;
+    --dark-secondary: #1a1b3a;
+    --glass-bg: rgba(255, 255, 255, 0.05);
+    --border-glow: rgba(0, 255, 255, 0.3);
+}
+
+/* Fundo animado */
+.stApp {
+    background: linear-gradient(135deg, var(--dark-bg) 0%, var(--dark-secondary) 100%);
+    background-size: 400% 400%;
+    animation: gradientShift 15s ease infinite;
+    min-height: 100vh;
+}
+
+@keyframes gradientShift {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+/* Cards com glassmorphism */
+.metric-card, .glass-card {
+    background: var(--glass-bg);
+    border: 1px solid var(--border-glow);
+    border-radius: 15px;
+    padding: 20px;
+    margin: 10px 0;
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    box-shadow: 0 0 30px rgba(0, 255, 255, 0.1), inset 0 1px 1px rgba(255, 255, 255, 0.1);
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.metric-card::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: linear-gradient(45deg, transparent, rgba(0, 255, 255, 0.1), transparent);
+    transform: rotate(45deg);
+    animation: shine 3s linear infinite;
+}
+
+@keyframes shine {
+    0% { transform: translateX(-100%) translateY(-100%) rotate(45deg); }
+    100% { transform: translateX(100%) translateY(100%) rotate(45deg); }
+}
+
+/* Texto neon */
+.metric-value {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: var(--primary-color);
+    text-shadow: 0 0 10px var(--primary-color), 0 0 20px var(--primary-color), 0 0 30px var(--primary-color);
+    font-family: 'Orbitron', monospace;
+    animation: glow 2s ease-in-out infinite alternate;
+}
+
+@keyframes glow {
+    from {
+        text-shadow: 0 0 10px var(--primary-color), 0 0 20px var(--primary-color), 0 0 30px var(--primary-color);
+    }
+    to {
+        text-shadow: 0 0 20px var(--primary-color), 0 0 30px var(--primary-color), 0 0 40px var(--primary-color);
+    }
+}
+
+/* Labels */
+.metric-label {
+    font-size: 0.9rem;
+    color: rgba(176, 176, 176, 0.8);
+    margin-top: 5px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    font-weight: 600;
+    font-family: 'Roboto Mono', monospace;
+}
+
+/* Títulos com gradiente */
+h1, h2, h3 {
+    background: linear-gradient(45deg, var(--primary-color), var(--secondary-color));
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
+
+/* Status indicators */
+.status-indicator {
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    margin-right: 8px;
+    animation: pulse 2s infinite;
+}
+
+.status-online { background-color: var(--success-color); box-shadow: 0 0 10px var(--success-color); }
+.status-warning { background-color: var(--warning-color); box-shadow: 0 0 10px var(--warning-color); }
+.status-offline { background-color: var(--danger-color); box-shadow: 0 0 10px var(--danger-color); }
+
+@keyframes pulse {
+    0% { transform: scale(0.95); box-shadow: 0 0 0 0 currentColor; }
+    70% { transform: scale(1); box-shadow: 0 0 0 10px transparent; }
+    100% { transform: scale(0.95); box-shadow: 0 0 0 0 transparent; }
+}
+
+/* Footer */
+.footer {
+    background: var(--glass-bg);
+    border-top: 1px solid var(--border-glow);
+    backdrop-filter: blur(10px);
+    padding: 20px;
+    text-align: center;
+    color: rgba(176, 176, 176, 0.8);
+    font-size: 0.9rem;
+}
