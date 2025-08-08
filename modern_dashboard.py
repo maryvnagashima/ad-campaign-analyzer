@@ -16,88 +16,13 @@ st.set_page_config(
     initial_sidebar_state="collapsed"
 )
 
-# CSS para tema escuro e efeitos visuais
-st.markdown("""
-<style>
-    /* Fundo escuro global */
-    .stApp {
-        background: linear-gradient(135deg, #0a0b1e 0%, #1a1b3a 100%);
-        color: #ffffff;
-    }
-    
-    /* Sidebar escura */
-    .css-1d391kg {
-        background: #0a0b1e;
-    }
-    
-    /* Métricas personalizadas */
-    div[data-testid="metric-container"] {
-        background: rgba(255, 255, 255, 0.05);
-        border: 1px solid rgba(0, 255, 255, 0.3);
-        padding: 1rem;
-        border-radius: 10px;
-        backdrop-filter: blur(10px);
-        box-shadow: 0 0 20px rgba(0, 255, 255, 0.1);
-    }
-    
-    div[data-testid="metric-container"] > div {
-        color: #00FFFF !important;
-    }
-    
-    /* Cards personalizados */
-    .metric-card {
-        background: rgba(255, 255, 255, 0.05);
-        border: 1px solid rgba(0, 255, 255, 0.3);
-        border-radius: 15px;
-        padding: 20px;
-        margin: 10px 0;
-        backdrop-filter: blur(10px);
-        box-shadow: 0 0 30px rgba(0, 255, 255, 0.1);
-        text-align: center;
-    }
-    
-    .metric-value {
-        font-size: 2.5rem;
-        font-weight: bold;
-        color: #00FFFF;
-        text-shadow: 0 0 10px rgba(0, 255, 255, 0.5);
-    }
-    
-    .metric-label {
-        font-size: 1rem;
-        color: #B0B0B0;
-        margin-top: 5px;
-    }
-    
-    /* Títulos */
-    h1, h2, h3 {
-        color: #00FFFF !important;
-        text-shadow: 0 0 10px rgba(0, 255, 255, 0.3);
-    }
-    
-    /* Botões */
-    .stButton > button {
-        background: linear-gradient(45deg, #00FFFF, #0080FF);
-        color: #000;
-        border: none;
-        border-radius: 10px;
-        font-weight: bold;
-        box-shadow: 0 0 20px rgba(0, 255, 255, 0.3);
-    }
-    
-    /* Selectbox e inputs */
-    .stSelectbox > div > div {
-        background: rgba(255, 255, 255, 0.1);
-        border: 1px solid rgba(0, 255, 255, 0.3);
-        border-radius: 5px;
-    }
-    
-    /* Remove header padding */
-    .block-container {
-        padding-top: 1rem;
-    }
-</style>
-""", unsafe_allow_html=True)
+def load_css():
+    """Carrega o CSS externo"""
+    with open("style.css", encoding="utf-8") as f:
+        st.markdown(f"<style>{f.read()}</style>", unsafe_allow_html=True)
+
+# Chame no início do app
+load_css()
 
 # Função para gerar dados sintéticos para demo
 @st.cache_data
