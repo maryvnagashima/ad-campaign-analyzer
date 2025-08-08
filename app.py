@@ -1,203 +1,28 @@
-# 1. Instalação forçada
-
-# 2. Agora importe normalmente
+# app.py
 import streamlit as st
 import plotly.graph_objects as go
 import plotly.express as px
 import pandas as pd
 import numpy as np
+import os
 
-# 3. Resto do seu código (CSS, funções, etc)
 # ===================================
-# 🔮 ESTILO CSS COMPLETO (seu código)
+# 🎨 CARREGAR CSS EXTERNO
 # ===================================
 def load_css():
-    st.markdown(
-        """
-        <style>
-        /* Dashboard Moderno - Estilos CSS Avançados */
-        :root {
-            --primary-color: #00FFFF;
-            --secondary-color: #0080FF;
-            --accent-color: #40E0D0;
-            --success-color: #00FF80;
-            --warning-color: #FFD700;
-            --danger-color: #FF4444;
-            --dark-bg: #0a0b1e;
-            --dark-secondary: #1a1b3a;
-            --glass-bg: rgba(255, 255, 255, 0.05);
-            --border-glow: rgba(0, 255, 255, 0.3);
-        }
+    """Carrega o arquivo style.css"""
+    css_path = "style.css"
+    if os.path.exists(css_path):
+        with open(css_path, encoding="utf-8") as f:
+            st.markdown(f"<style>{f.read()}</style>", unsafe_allow_html=True)
+    else:
+        st.warning("⚠️ Arquivo style.css não encontrado. O estilo não será aplicado.")
 
-        * { box-sizing: border-box; }
-
-        .stApp {
-            background: linear-gradient(135deg, var(--dark-bg) 0%, var(--dark-secondary) 100%);
-            background-size: 400% 400%;
-            animation: gradientShift 15s ease infinite;
-            min-height: 100vh;
-        }
-
-        @keyframes gradientShift {
-            0% { background-position: 0% 50%; }
-            50% { background-position: 100% 50%; }
-            100% { background-position: 0% 50%; }
-        }
-
-        .metric-card, .glass-card {
-            background: var(--glass-bg);
-            border: 1px solid var(--border-glow);
-            border-radius: 15px;
-            padding: 20px;
-            margin: 10px 0;
-            backdrop-filter: blur(20px);
-            -webkit-backdrop-filter: blur(20px);
-            box-shadow: 0 0 30px rgba(0, 255, 255, 0.1), inset 0 1px 1px rgba(255, 255, 255, 0.1);
-            transition: all 0.3s ease;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .metric-card:hover, .glass-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 10px 40px rgba(0, 255, 255, 0.2), inset 0 1px 1px rgba(255, 255, 255, 0.2);
-            border-color: var(--primary-color);
-        }
-
-        .metric-card::before {
-            content: '';
-            position: absolute;
-            top: -50%;
-            left: -50%;
-            width: 200%;
-            height: 200%;
-            background: linear-gradient(45deg, transparent, rgba(0, 255, 255, 0.1), transparent);
-            transform: rotate(45deg);
-            animation: shine 3s linear infinite;
-        }
-
-        @keyframes shine {
-            0% { transform: translateX(-100%) translateY(-100%) rotate(45deg); }
-            100% { transform: translateX(100%) translateY(100%) rotate(45deg); }
-        }
-
-        .metric-value {
-            font-size: 2.5rem;
-            font-weight: bold;
-            color: var(--primary-color);
-            text-shadow: 0 0 10px var(--primary-color), 0 0 20px var(--primary-color), 0 0 30px var(--primary-color);
-            font-family: 'Orbitron', monospace;
-            animation: glow 2s ease-in-out infinite alternate;
-        }
-
-        @keyframes glow {
-            from { text-shadow: 0 0 10px var(--primary-color), 0 0 20px var(--primary-color), 0 0 30px var(--primary-color); }
-            to { text-shadow: 0 0 20px var(--primary-color), 0 0 30px var(--primary-color), 0 0 40px var(--primary-color); }
-        }
-
-        .metric-label {
-            font-size: 0.9rem;
-            color: rgba(176, 176, 176, 0.8);
-            margin-top: 5px;
-            letter-spacing: 2px;
-            text-transform: uppercase;
-            font-weight: 600;
-            font-family: 'Roboto Mono', monospace;
-        }
-
-        h1, h2, h3 {
-            background: linear-gradient(45deg, var(--primary-color), var(--secondary-color));
-            background-clip: text;
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            font-weight: bold;
-            margin-bottom: 1rem;
-        }
-
-        .stButton > button {
-            background: linear-gradient(45deg, var(--primary-color), var(--secondary-color));
-            color: #000;
-            border: none;
-            border-radius: 10px;
-            padding: 12px 24px;
-            font-weight: bold;
-            font-size: 1rem;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            box-shadow: 0 0 20px rgba(0, 255, 255, 0.3);
-            transition: all 0.3s ease;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .stButton > button::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: -100%;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
-            transition: left 0.5s;
-        }
-
-        .stButton > button:hover::before {
-            left: 100%;
-        }
-
-        .status-indicator {
-            display: inline-block;
-            width: 12px;
-            height: 12px;
-            border-radius: 50%;
-            margin-right: 8px;
-            animation: pulse 2s infinite;
-        }
-
-        .status-online { background-color: var(--success-color); box-shadow: 0 0 10px var(--success-color); }
-        .status-warning { background-color: var(--warning-color); box-shadow: 0 0 10px var(--warning-color); }
-        .status-offline { background-color: var(--danger-color); box-shadow: 0 0 10px var(--danger-color); }
-
-        @keyframes pulse {
-            0% { transform: scale(0.95); box-shadow: 0 0 0 0 currentColor; }
-            70% { transform: scale(1); box-shadow: 0 0 0 10px transparent; }
-            100% { transform: scale(0.95); box-shadow: 0 0 0 0 transparent; }
-        }
-
-        .dashboard-title {
-            font-size: 3rem;
-            font-weight: 800;
-            text-align: center;
-            margin-bottom: 2rem;
-            background: linear-gradient(45deg, var(--primary-color), var(--secondary-color), var(--accent-color));
-            background-size: 300% 300%;
-            background-clip: text;
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            animation: gradientText 4s ease infinite;
-        }
-
-        @keyframes gradientText {
-            0%, 100% { background-position: 0% 50%; }
-            50% { background-position: 100% 50%; }
-        }
-
-        .footer {
-            background: var(--glass-bg);
-            border-top: 1px solid var(--border-glow);
-            backdrop-filter: blur(10px);
-            padding: 20px;
-            text-align: center;
-            color: rgba(176, 176, 176, 0.8);
-            font-size: 0.9rem;
-        }
-        </style>
-        """,
-        unsafe_allow_html=True
-    )
+# Carregar o CSS
+load_css()
 
 # ===================================
-# 📈 FUNÇÕES DE GRÁFICOS (seu código)
+# 📈 FUNÇÕES DE GRÁFICOS
 # ===================================
 def create_neon_line_chart(data, title="Performance Trend"):
     fig = go.Figure()
@@ -213,14 +38,15 @@ def create_neon_line_chart(data, title="Performance Trend"):
     fig.update_layout(
         title={'text': title, 'font': {'size': 16, 'color': '#00FFFF'}, 'x': 0.02},
         plot_bgcolor='rgba(0,0,0,0)', paper_bgcolor='rgba(0,0,0,0)',
-        font={'color': '#ffffff'}, xaxis={'gridcolor': 'rgba(255,255,255,0.1)', 'zerolinecolor': 'rgba(255,255,255,0.1)', 'color': '#ffffff'},
+        font={'color': '#ffffff'}, 
+        xaxis={'gridcolor': 'rgba(255,255,255,0.1)', 'zerolinecolor': 'rgba(255,255,255,0.1)', 'color': '#ffffff'},
         yaxis={'gridcolor': 'rgba(255,255,255,0.1)', 'zerolinecolor': 'rgba(255,255,255,0.1)', 'color': '#ffffff'},
         height=250, margin=dict(l=20, r=20, t=40, b=20), showlegend=False
     )
     return fig
 
 def create_metric_card(value, label, change=None, change_type="positive"):
-    change_color = "var(--success-color)" if change_type == "positive" else "var(--danger-color)"
+    change_color = "#00FF80" if change_type == "positive" else "#FF4444"
     change_icon = "▲" if change_type == "positive" else "▼"
     change_html = f"<div style='color: {change_color}; margin-top: 5px;'>{change_icon} {change}%</div>" if change else ""
     return f"""
@@ -235,7 +61,6 @@ def create_metric_card(value, label, change=None, change_type="positive"):
 # 🚀 CONFIGURAÇÃO INICIAL
 # ===================================
 st.set_page_config(page_title="AI de Criativos", layout="wide")
-load_css()
 
 # ===================================
 # 📁 UPLOAD DE ARQUIVO
@@ -248,7 +73,6 @@ if uploaded_file is not None:
     df = pd.read_csv(uploaded_file)
     st.sidebar.success("✅ Dados carregados!")
 else:
-    # Gerar dados simulados
     np.random.seed(42)
     tipos = ["imagem única", "carrossel", "vídeo curto"]
     imagens = ["pessoa sorrindo", "produto", "antes/depois"]
@@ -313,7 +137,7 @@ if menu == "🏠 Home / Resumo Geral":
     with col4:
         st.markdown(create_metric_card("3.2x", "ROI", "4.1", "positive"), unsafe_allow_html=True)
     
-    # Gráficos
+    # Gráfico de linha neon
     line_data = {'x': list(range(30)), 'y': [20 + 10*np.sin(x/5) + np.random.normal(0, 2) for x in range(30)]}
     st.plotly_chart(create_neon_line_chart(line_data, "📈 Evolução do ROAS"), use_container_width=True)
 
@@ -345,15 +169,6 @@ elif menu == "🧠 Sugestões da IA":
         <p><span class='status-indicator status-warning'></span> <strong>EUA:</strong> Aumentar Google Ads em 15%</p>
         <p><span class='status-indicator status-online'></span> <strong>Alemanha:</strong> Manter orçamento atual</p>
         <p><span class='status-indicator status-warning'></span> <strong>CTA ideal:</strong> 'Comece grátis' converte 68% mais</p>
-    </div>
-    """, unsafe_allow_html=True)
-    
-    st.markdown("""
-    <div class='glass-card'>
-        <h3>💡 Insights da IA</h3>
-        <p>• Criativos com <strong>imagem de pessoa sorrindo</strong> têm CTR 40% maior</p>
-        <p>• Formato <strong>vídeo curto</strong> no TikTok converte 2x mais</p>
-        <p>• Melhor horário: <strong>segundas entre 18h-20h</strong></p>
     </div>
     """, unsafe_allow_html=True)
 
