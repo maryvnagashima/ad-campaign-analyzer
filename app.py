@@ -110,9 +110,9 @@ else:
     df = pd.DataFrame(data)
 
 # ===================================
-# 🧭 MENU LATERAL
+# 🧭 ABAS HORIZONTAIS (sem dropdown!)
 # ===================================
-menu = st.sidebar.selectbox("Navegação", [
+tabs = st.tabs([
     "🏠 Home / Resumo Geral",
     "🎯 CAC por Criativo",
     "🎥 Desempenho de Criativos",
@@ -120,12 +120,9 @@ menu = st.sidebar.selectbox("Navegação", [
     "🧠 Sugestões da IA"
 ])
 
-# ===================================
-# 🏠 HOME
-# ===================================
-if menu == "🏠 Home / Resumo Geral":
-    st.markdown("<h1 class='dashboard-title'>AI de Otimização de Criativos</h1>", unsafe_allow_html=True)
-    st.markdown("<p style='text-align: center; color: #aaa;'>Descubra os melhores criativos com inteligência artificial</p>", unsafe_allow_html=True)
+# === 1. HOME ===
+with tabs[0]:
+    st.markdown("<h2 class='dashboard-title'>Resumo Geral</h2>", unsafe_allow_html=True)
     
     col1, col2, col3, col4 = st.columns(4)
     with col1:
@@ -137,14 +134,11 @@ if menu == "🏠 Home / Resumo Geral":
     with col4:
         st.markdown(create_metric_card("3.2x", "ROI", "4.1", "positive"), unsafe_allow_html=True)
     
-    # Gráfico de linha neon
     line_data = {'x': list(range(30)), 'y': [20 + 10*np.sin(x/5) + np.random.normal(0, 2) for x in range(30)]}
     st.plotly_chart(create_neon_line_chart(line_data, "📈 Evolução do ROAS"), use_container_width=True)
 
-# ===================================
-# 🎯 CAC por Criativo
-# ===================================
-elif menu == "🎯 CAC por Criativo":
+# === 2. CAC POR CRIATIVO ===
+with tabs[1]:
     st.markdown("<h2 class='dashboard-title'>CAC por Criativo</h2>", unsafe_allow_html=True)
     
     df['cac'] = df['custo_total'] / df['conversoes'].replace(0, 1)
@@ -156,10 +150,63 @@ elif menu == "🎯 CAC por Criativo":
     fig.update_traces(marker=dict(line=dict(width=1, color='white')))
     st.plotly_chart(fig, use_container_width=True)
 
-# ===================================
-# 🧠 Sugestões da IA
-# ===================================
-elif menu == "🧠 Sugestões da IA":
+# === 3. DESEMPENHO DE CRIATIVOS ===
+with tabs[2]:
+    st.markdown("<h2 class='dashboard-title'>Desempenho de Criativos</h2>", unsafe_allow_html=True)
+
+    st.subheader("🖼️ Pré-visualização de Criativos")
+    col1, col2, col3 = st.columns(3)
+    with col1:
+        st.image("https://via.placeholder.com/150/00FFFF/000000?text=Video+Short", caption="Vídeo curto - Pessoa sorrindo")
+        st.markdown("**CTR:** 3.2% | **CPA:** R$ 58")
+    with col2:
+        st.image("https://via.placeholder.com/150/0080FF/FFFFFF?text=Carrossel", caption="Carrossel - Antes/Depois")
+        st.markdown("**CTR:** 2.8% | **CPA:** R$ 65")
+    with col3:
+        st.image("https://via.placeholder.com/150/40E0D0/000000?text=Imagem+Unica", caption="Imagem única - Produto")
+        st.markdown("**CTR:** 1.9% | **CPA:** R$ 89")
+
+    st.subheader("📊 CTR por Tipo de Criativo")
+    ctr_data = df.groupby('tipo_criativo')['cliques'].sum() / df.groupby('tipo_criativo')['impressoes'].sum()
+    fig_ctr = px.bar(ctr_data, title="CTR por Tipo de Criativo", color_discrete_sequence=['#00FFFF'])
+    fig_ctr.update_traces(marker=dict(line=dict(width=1, color='white')))
+    st.plotly_chart(fig_ctr, use_container_width=True)
+
+# === 4. CANAL & PAÍS ===
+with tabs[3]:
+    st.markdown("<h2 class='dashboard-title'>Desempenho por Canal e País</h2>", unsafe_allow_html=True)
+
+    st.subheader("🌍 ROAS por País")
+    roas_por_pais = {
+        'Brasil': 2.8,
+        'EUA': 3.2,
+        'Alemanha': 2.5,
+        'França': 2.1,
+        'Canadá': 3.0
+    }
+    pais_df = pd.DataFrame(list(roas_por_pais.items()), columns=['País', 'ROAS'])
+    fig_pais = px.bar(pais_df, x='País', y='ROAS', title="ROAS por País", color='ROAS', color_continuous_scale='Blues')
+    st.plotly_chart(fig_pais, use_container_width=True)
+
+    st.subheader("🌎 Mapa de Cliques por País")
+    mapa_data = pd.DataFrame({
+        'country': ['Brazil', 'United States', 'Germany', 'France', 'Canada'],
+        'clicks': [45000, 62000, 31000, 28000, 38000]
+    })
+    fig_mapa = px.choropleth(
+        mapa_data,
+        locations='country',
+        locationmode='country names',
+        color='clicks',
+        hover_name='country',
+        color_continuous_scale='deep',
+        title="Cliques Globais por País"
+    )
+    fig_mapa.update_layout(geo=dict(bgcolor='rgba(0,0,0,0)', showframe=False))
+    st.plotly_chart(fig_mapa, use_container_width=True)
+
+# === 5. SUGESTÕES DA IA ===
+with tabs[4]:
     st.markdown("<h2 class='dashboard-title'>Sugestões da IA</h2>", unsafe_allow_html=True)
     
     st.markdown("""
@@ -171,8 +218,16 @@ elif menu == "🧠 Sugestões da IA":
         <p><span class='status-indicator status-warning'></span> <strong>CTA ideal:</strong> 'Comece grátis' converte 68% mais</p>
     </div>
     """, unsafe_allow_html=True)
+    
+    st.markdown("""
+    <div class='glass-card'>
+        <h3>💡 Insights da IA</h3>
+        <p>• Criativos com <strong>imagem de pessoa sorrindo</strong> têm CTR 40% maior</p>
+        <p>• Formato <strong>vídeo curto</strong> no TikTok converte 2x mais</p>
+        <p>• Melhor horário: <strong>segundas entre 18h-20h</strong></p>
+    </div>
+    """, unsafe_allow_html=True)
 
-# ===================================
 # 📦 RODAPÉ
 # ===================================
 st.markdown("---")
