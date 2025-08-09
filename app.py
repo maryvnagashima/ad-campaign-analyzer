@@ -64,6 +64,7 @@ st.set_page_config(page_title="AI de Criativos", layout="wide")
 
 # ===================================
 # 📁 UPLOAD DE ARQUIVO (com limite de 3MB)
+# ===================================
 st.sidebar.markdown("<h3 style='color: #00FFFF;'>🔼 Upload de Dados</h3>", unsafe_allow_html=True)
 
 MAX_FILE_SIZE = 3 * 1024 * 1024  # 3MB em bytes
@@ -87,15 +88,7 @@ if uploaded_file is not None:
         st.sidebar.error(f"❌ Erro ao ler o CSV: {e}")
         st.stop()
 else:
-    # Gerar dados simulados (como antes)
-    np.random.seed(42)
-    # ... (código de geração de dados)
-
-# Dados simulados (se não houver upload)
-if uploaded_file is not None:
-    df = pd.read_csv(uploaded_file)
-    st.sidebar.success("✅ Dados carregados!")
-else:
+    # Gerar dados simulados (se não houver upload)
     np.random.seed(42)
     tipos = ["imagem única", "carrossel", "vídeo curto"]
     imagens = ["pessoa sorrindo", "produto", "antes/depois"]
@@ -133,7 +126,7 @@ else:
     df = pd.DataFrame(data)
 
 # ===================================
-# 🧭 ABAS HORIZONTAIS (sem dropdown!)
+# 🧭 ABAS HORIZONTAIS
 # ===================================
 tabs = st.tabs([
     "🏠 Home / Resumo Geral",
@@ -212,63 +205,57 @@ with tabs[3]:
     st.plotly_chart(fig_pais, use_container_width=True)
 
     st.subheader("🌎 Mapa de Desempenho por País")
+    mapa_data = pd.DataFrame({
+        'country': ['Brazil', 'United States', 'Germany', 'France', 'Canada', 'UK', 'Japan'],
+        'conversions': [4500, 6200, 3100, 2800, 3800, 4100, 2900],
+        'roas': [2.8, 3.2, 2.5, 2.1, 3.0, 3.1, 2.3],
+        'clicks': [45000, 62000, 31000, 28000, 38000, 41000, 29000]
+    })
 
-# Dados de exemplo (substitua pelo seu CSV se tiver)
-mapa_data = pd.DataFrame({
-    'country': ['Brazil', 'United States', 'Germany', 'France', 'Canada', 'UK', 'Japan'],
-    'conversions': [4500, 6200, 3100, 2800, 3800, 4100, 2900],
-    'roas': [2.8, 3.2, 2.5, 2.1, 3.0, 3.1, 2.3],
-    'clicks': [45000, 62000, 31000, 28000, 38000, 41000, 29000]
-})
-
-# Criar mapa com estilo neon
-fig_mapa = px.choropleth(
-    mapa_data,
-    locations='country',
-    locationmode='country names',
-    color='roas',
-    hover_name='country',
-    hover_data={'conversions': True, 'clicks': True, 'roas': ':.2f'},
-    color_continuous_scale='deep',
-    range_color=[1.5, 3.5],
-    title="ROAS por País"
-)
-
-# Estilo moderno
-fig_mapa.update_layout(
-    title_font=dict(size=16, color='#00FFFF'),
-    font=dict(color='#ffffff'),
-    paper_bgcolor='rgba(0,0,0,0)',
-    plot_bgcolor='rgba(0,0,0,0)',
-    geo=dict(
-        showframe=False,
-        showcoastlines=False,
-        projection_type='natural earth',
-        bgcolor='rgba(0,0,0,0)',
-        # Cores do oceano e terra
-        watercolor='rgba(0, 0, 0, 0)',
-        landcolor='rgba(30, 30, 50, 0.8)',
-        showcountries=True,
-        countrycolor='rgba(255, 255, 255, 0.1)'
-    ),
-    coloraxis_colorbar=dict(
-        title="ROAS",
-        titlefont=dict(color='#00FFFF'),
-        tickfont=dict(color='#ffffff'),
-        bgcolor='rgba(0,0,0,0)'
+    fig_mapa = px.choropleth(
+        mapa_data,
+        locations='country',
+        locationmode='country names',
+        color='roas',
+        hover_name='country',
+        hover_data={'conversions': True, 'clicks': True, 'roas': ':.2f'},
+        color_continuous_scale='deep',
+        range_color=[1.5, 3.5],
+        title="ROAS por País"
     )
-)
 
-# Adicionar brilho ao passar o mouse
-fig_mapa.update_traces(
-    hoverlabel=dict(
-        bgcolor="rgba(0, 255, 255, 0.2)",
-        font_size=14,
-        font_family="Arial"
+    fig_mapa.update_layout(
+        title_font=dict(size=16, color='#00FFFF'),
+        font=dict(color='#ffffff'),
+        paper_bgcolor='rgba(0,0,0,0)',
+        plot_bgcolor='rgba(0,0,0,0)',
+        geo=dict(
+            showframe=False,
+            showcoastlines=False,
+            projection_type='natural earth',
+            bgcolor='rgba(0,0,0,0)',
+            watercolor='rgba(0, 0, 0, 0)',
+            landcolor='rgba(30, 30, 50, 0.8)',
+            showcountries=True,
+            countrycolor='rgba(255, 255, 255, 0.1)'
+        ),
+        coloraxis_colorbar=dict(
+            title="ROAS",
+            titlefont=dict(color='#00FFFF'),
+            tickfont=dict(color='#ffffff'),
+            bgcolor='rgba(0,0,0,0)'
+        )
     )
-)
 
-st.plotly_chart(fig_mapa, use_container_width=True)
+    fig_mapa.update_traces(
+        hoverlabel=dict(
+            bgcolor="rgba(0, 255, 255, 0.2)",
+            font_size=14,
+            font_family="Arial"
+        )
+    )
+
+    st.plotly_chart(fig_mapa, use_container_width=True)
 
 # === 5. SUGESTÕES DA IA ===
 with tabs[4]:
@@ -293,7 +280,7 @@ with tabs[4]:
     </div>
     """, unsafe_allow_html=True)
 
+# ===================================
 # 📦 RODAPÉ
 # ===================================
-st.markdown("---")
-st.markdown("💼 Projeto de portfólio por Marina vieira Nagashima | GitHub: https://github.com/maryvnagashima/")
+st.markdown("<div class='footer'>💼 Projeto de portfólio | by Marina Vieir Nagashima</div>", unsafe_allow_html=True)
