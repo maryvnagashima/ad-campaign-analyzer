@@ -1,6 +1,5 @@
 # app.py
 import streamlit as st
-import plotly.graph_objects as go
 import plotly.express as px
 import pandas as pd
 import numpy as np
@@ -18,29 +17,34 @@ def load_css():
     else:
         st.warning("⚠️ Arquivo style.css não encontrado. O estilo não será aplicado.")
 
+# Carregar o CSS
 load_css()
 
 # ===================================
-# 📈 FUNÇÕES DE GRÁFICOS
+# 📈 FUNÇÃO DE GRÁFICO DE LINHA
 # ===================================
 def create_neon_line_chart(data, title="Performance Trend"):
-    fig = go.Figure()
-    fig.add_trace(go.Scatter(
-        x=data['x'], y=data['y'], mode='lines', name='Main Trend',
-        line=dict(color='#00FFFF', width=3, shape='spline'),
-        fill='tonexty', fillcolor='rgba(0, 255, 255, 0.1)'
-    ))
-    fig.add_trace(go.Scatter(
-        x=data['x'], y=[0]*len(data['x']), mode='lines', line=dict(color='rgba(0,0,0,0)'),
-        fill='tonexty', fillcolor='rgba(0, 255, 255, 0.05)', showlegend=False
-    ))
+    fig = px.line(
+        data,
+        x='x',
+        y='y',
+        title=title
+    )
+    fig.update_traces(
+        line=dict(color='#00FFFF', width=3),
+        fill='tonexty',
+        fillcolor='rgba(0, 255, 255, 0.1)'
+    )
     fig.update_layout(
-        title={'text': title, 'font': {'size': 16, 'color': '#00FFFF'}, 'x': 0.02},
-        plot_bgcolor='rgba(0,0,0,0)', paper_bgcolor='rgba(0,0,0,0)',
-        font={'color': '#ffffff'}, 
-        xaxis={'gridcolor': 'rgba(255,255,255,0.1)', 'zerolinecolor': 'rgba(255,255,255,0.1)', 'color': '#ffffff'},
-        yaxis={'gridcolor': 'rgba(255,255,255,0.1)', 'zerolinecolor': 'rgba(255,255,255,0.1)', 'color': '#ffffff'},
-        height=250, margin=dict(l=20, r=20, t=40, b=20), showlegend=False
+        title={'font': {'size': 16, 'color': '#00FFFF'}, 'x': 0.02},
+        plot_bgcolor='rgba(0,0,0,0)',
+        paper_bgcolor='rgba(0,0,0,0)',
+        font={'color': '#ffffff'},
+        xaxis={'gridcolor': 'rgba(255,255,255,0.1)', 'color': '#ffffff'},
+        yaxis={'gridcolor': 'rgba(255,255,255,0.1)', 'color': '#ffffff'},
+        height=250,
+        margin=dict(l=20, r=20, t=40, b=20),
+        showlegend=False
     )
     return fig
 
@@ -146,7 +150,10 @@ with tabs[0]:
     with col4:
         st.markdown(create_metric_card("3.2x", "ROI", "4.1", "positive"), unsafe_allow_html=True)
     
-    line_data = {'x': list(range(30)), 'y': [20 + 10*np.sin(x/5) + np.random.normal(0, 2) for x in range(30)]}
+    line_data = pd.DataFrame({
+        'x': list(range(30)),
+        'y': [20 + 10*np.sin(x/5) + np.random.normal(0, 2) for x in range(30)]
+    })
     st.plotly_chart(create_neon_line_chart(line_data, "📈 Evolução do ROAS"), use_container_width=True)
 
 # === 2. CAC POR CRIATIVO ===
@@ -207,56 +214,17 @@ with tabs[3]:
     })
 
     fig_mapa = px.choropleth(
-        mapa_data,
-        locations='country',
-        locationmode='country names',
-        color='roas',
-        hover_name='country',
+        data_frame=mapa_data,
+        locations='country',           # ✅ Nome da coluna
+        locationmode='country names',  # ✅ Modo correto
+        color='roas',                  # ✅ Nome da coluna
+        hover_name='country',          # ✅ Nome da coluna
         color_continuous_scale='deep',
         range_color=[1.5, 3.5],
         title="ROAS por País"
     )
 
-    # ✅ NENHUM update_layout — seguro para o Streamlit Cloud
-    st.plotly_chart(fig_mapa, use_container_width=True)
-
-    # ✅ Corrigido: título no px.choropleth, sem update_layout problemático
-    fig_mapa = px.choropleth(
-        mapa_data,
-        locations='country',
-        locationmode='country names',
-        color='roas',
-        hover_name='country',
-        hover_data={'conversions': True, 'clicks': True, 'roas': ':.2f'},
-        color_continuous_scale='deep',
-        range_color=[1.5, 3.5],
-        title="ROAS por País", 
-        # ✅ Título aqui, não no update_layout
-        labels={'roas': 'ROAS'}
-    )
-
-    # ✅ Apenas configurações seguras no update_layout
-    fig_mapa.update_layout(
-        font=dict(color='#ffffff'),
-        paper_bgcolor='rgba(0,0,0,0)',
-        plot_bgcolor='rgba(0,0,0,0)',
-        geo=dict(
-            showframe=False,
-            showcoastlines=False,
-            projection_type='natural earth',
-            bgcolor='rgba(0,0,0,0)',
-            landcolor='rgba(30, 30, 50, 0.8)',
-            showcountries=True,
-            countrycolor='rgba(255, 255, 255, 0.1)'
-        ),
-        coloraxis_colorbar=dict(
-            title="ROAS",
-            titlefont=dict(color='#00FFFF'),
-            tickfont=dict(color='#ffffff'),
-            bgcolor='rgba(0,0,0,0)'
-        )
-    )
-
+    # ❌ NÃO use update_layout com propriedades problemáticas
     st.plotly_chart(fig_mapa, use_container_width=True)
 
 # === 5. SUGESTÕES DA IA ===
@@ -285,4 +253,4 @@ with tabs[4]:
 # ===================================
 # 📦 RODAPÉ
 # ===================================
-st.markdown("<div class='footer'>💼 Projeto de portfólio | by Marina Vieira Nagashima</div>", unsafe_allow_html=True)
+st.markdown("<div class='footer'>💼 Projeto de portfólio | by [Seu Nome]</div>", unsafe_allow_html=True)
