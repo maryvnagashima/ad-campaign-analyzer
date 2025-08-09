@@ -76,11 +76,9 @@ uploaded_file = st.sidebar.file_uploader(
 )
 
 if uploaded_file is not None:
-    # Verificar tamanho
     if uploaded_file.size > MAX_FILE_SIZE:
         st.sidebar.error("❌ Arquivo muito grande! O limite é 3MB.")
         st.stop()
-    
     try:
         df = pd.read_csv(uploaded_file)
         st.sidebar.success(f"✅ Dados carregados! ({uploaded_file.size // 1024} KB)")
@@ -88,7 +86,6 @@ if uploaded_file is not None:
         st.sidebar.error(f"❌ Erro ao ler o CSV: {e}")
         st.stop()
 else:
-    # Gerar dados simulados (se não houver upload)
     np.random.seed(42)
     tipos = ["imagem única", "carrossel", "vídeo curto"]
     imagens = ["pessoa sorrindo", "produto", "antes/depois"]
@@ -224,8 +221,12 @@ with tabs[3]:
         title="ROAS por País"
     )
 
+    # ✅ Correção: use 'title' como dict, não 'title_font'
     fig_mapa.update_layout(
-        title_font=dict(size=16, color='#00FFFF'),
+        title=dict(
+            text="ROAS por País",
+            font=dict(size=16, color='#00FFFF')
+        ),
         font=dict(color='#ffffff'),
         paper_bgcolor='rgba(0,0,0,0)',
         plot_bgcolor='rgba(0,0,0,0)',
@@ -234,7 +235,6 @@ with tabs[3]:
             showcoastlines=False,
             projection_type='natural earth',
             bgcolor='rgba(0,0,0,0)',
-            watercolor='rgba(0, 0, 0, 0)',
             landcolor='rgba(30, 30, 50, 0.8)',
             showcountries=True,
             countrycolor='rgba(255, 255, 255, 0.1)'
@@ -244,14 +244,6 @@ with tabs[3]:
             titlefont=dict(color='#00FFFF'),
             tickfont=dict(color='#ffffff'),
             bgcolor='rgba(0,0,0,0)'
-        )
-    )
-
-    fig_mapa.update_traces(
-        hoverlabel=dict(
-            bgcolor="rgba(0, 255, 255, 0.2)",
-            font_size=14,
-            font_family="Arial"
         )
     )
 
@@ -283,4 +275,4 @@ with tabs[4]:
 # ===================================
 # 📦 RODAPÉ
 # ===================================
-st.markdown("<div class='footer'>💼 Projeto de portfólio | by Marina Vieir Nagashima</div>", unsafe_allow_html=True)
+st.markdown("<div class='footer'>💼 Projeto de portfólio | by Marina Vieira Nagashima</div>", unsafe_allow_html=True)
