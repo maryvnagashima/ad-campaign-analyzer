@@ -18,7 +18,6 @@ def load_css():
     else:
         st.warning("⚠️ Arquivo style.css não encontrado. O estilo não será aplicado.")
 
-# Carregar o CSS
 load_css()
 
 # ===================================
@@ -67,7 +66,7 @@ st.set_page_config(page_title="AI de Criativos", layout="wide")
 # ===================================
 st.sidebar.markdown("<h3 style='color: #00FFFF;'>🔼 Upload de Dados</h3>", unsafe_allow_html=True)
 
-MAX_FILE_SIZE = 3 * 1024 * 1024  # 3MB em bytes
+MAX_FILE_SIZE = 3 * 1024 * 1024  # 3MB
 
 uploaded_file = st.sidebar.file_uploader(
     "Carregue seu CSV (máx. 3MB)",
@@ -209,6 +208,7 @@ with tabs[3]:
         'clicks': [45000, 62000, 31000, 28000, 38000, 41000, 29000]
     })
 
+    # ✅ Corrigido: título no px.choropleth, sem update_layout problemático
     fig_mapa = px.choropleth(
         mapa_data,
         locations='country',
@@ -218,15 +218,12 @@ with tabs[3]:
         hover_data={'conversions': True, 'clicks': True, 'roas': ':.2f'},
         color_continuous_scale='deep',
         range_color=[1.5, 3.5],
-        title="ROAS por País"
+        title="ROAS por País",  # ✅ Título aqui, não no update_layout
+        labels={'roas': 'ROAS'}
     )
 
-    # ✅ Correção: use 'title' como dict, não 'title_font'
+    # ✅ Apenas configurações seguras no update_layout
     fig_mapa.update_layout(
-        title=dict(
-            text="ROAS por País",
-            font=dict(size=16, color='#00FFFF')
-        ),
         font=dict(color='#ffffff'),
         paper_bgcolor='rgba(0,0,0,0)',
         plot_bgcolor='rgba(0,0,0,0)',
