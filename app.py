@@ -203,10 +203,22 @@ with tabs[3]:
     st.subheader("🌎 Mapa de Desempenho por País")
     mapa_data = pd.DataFrame({
         'country': ['Brazil', 'United States', 'Germany', 'France', 'Canada', 'UK', 'Japan'],
-        'conversions': [4500, 6200, 3100, 2800, 3800, 4100, 2900],
-        'roas': [2.8, 3.2, 2.5, 2.1, 3.0, 3.1, 2.3],
-        'clicks': [45000, 62000, 31000, 28000, 38000, 41000, 29000]
+        'roas': [2.8, 3.2, 2.5, 2.1, 3.0, 3.1, 2.3]
     })
+
+    fig_mapa = px.choropleth(
+        mapa_data,
+        locations='country',
+        locationmode='country names',
+        color='roas',
+        hover_name='country',
+        color_continuous_scale='deep',
+        range_color=[1.5, 3.5],
+        title="ROAS por País"
+    )
+
+    # ✅ NENHUM update_layout — seguro para o Streamlit Cloud
+    st.plotly_chart(fig_mapa, use_container_width=True)
 
     # ✅ Corrigido: título no px.choropleth, sem update_layout problemático
     fig_mapa = px.choropleth(
@@ -218,7 +230,8 @@ with tabs[3]:
         hover_data={'conversions': True, 'clicks': True, 'roas': ':.2f'},
         color_continuous_scale='deep',
         range_color=[1.5, 3.5],
-        title="ROAS por País",  # ✅ Título aqui, não no update_layout
+        title="ROAS por País", 
+        # ✅ Título aqui, não no update_layout
         labels={'roas': 'ROAS'}
     )
 
